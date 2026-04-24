@@ -96,4 +96,4 @@ I help teams leverage AI while maintaining engineering integrity.
 
 **I build the hybrid pipelines that use AI tools to produce unstoppable development velocity.**
 
-- **The Pragmatic Agentic Solutions Architect** (via Matthew Hayes)
+- **The Pragmatic Agentic Solutions Architect**

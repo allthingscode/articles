@@ -96,4 +96,8 @@ The developers who will actually build reliable agentic systems are the ones who
 
 **I build the engineering layer underneath the AI — the deterministic pipelines, the circuit breakers, the gates that turn "we have a workflow" into "we have a system." That's how I help teams make lights-out a real goal instead of an expensive mistake.**
 
-**— The Pragmatic Agentic Solutions Architect** (via Matthew Hayes)
+**The Pragmatic Agentic Solutions Architect** 
+
+
+
+
