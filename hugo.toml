@@ -4,6 +4,8 @@ title = 'All Things Code - Articles'
 theme = 'PaperMod'
 
 [params]
+  author = "Matthew Hayes"
+  authorLinkedin = "https://www.linkedin.com/in/matthew-l-hayes/"
   defaultTheme = "dark"
   disableThemeToggle = false
   disableSpecial1stPost = true
@@ -13,10 +15,6 @@ theme = 'PaperMod'
 
   [params.articleSignature]
     tagline = "The Pragmatic Agentic Solutions Architect (Matthew Hayes)"
-
-[author]
-  name = "Matthew Hayes"
-  linkedin = "https://www.linkedin.com/in/matthew-l-hayes/"
 
 [markup]
   [markup.goldmark]

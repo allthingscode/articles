@@ -1,6 +1,6 @@
-{{- $name := site.Params.author.name | default "Author" -}}
+{{- $name := site.Params.author | default "Author" -}}
 {{- $tagline := site.Params.articleSignature.tagline | default "The Pragmatic Agentic Solutions Architect" -}}
-{{- $linkedin := site.Params.author.linkedin | default "" -}}
+{{- $linkedin := site.Params.authorLinkedin | default "" -}}
 
 <section class="article-signature" aria-label="Author signature">
   <p class="article-signature__name">{{ $name }}</p>
