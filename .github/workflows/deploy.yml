@@ -1,4 +1,5 @@
 name: Deploy Hugo site to GitHub Pages
+# GitHub Pages must be configured to deploy from GitHub Actions.
 
 on:
   push:
