@@ -1,0 +1,13 @@
+<script>
+    (function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const themeParam = urlParams.get('theme');
+        
+        if (themeParam === 'light' || themeParam === 'dark') {
+            // Update the DOM immediately to prevent flash
+            document.documentElement.setAttribute('data-theme', themeParam);
+            // Persist the choice so it lasts as they navigate
+            localStorage.setItem("pref-theme", themeParam);
+        }
+    })();
+</script>
