@@ -151,7 +151,8 @@ body {
 }
 
 .paginav a:hover {
-    background: rgba(0, 0, 0, 0.03);
+    background: rgba(0, 0, 0, 0.06);
+    border-color: var(--secondary);
 }
 
 :root[data-theme="dark"] .paginav a:hover {
