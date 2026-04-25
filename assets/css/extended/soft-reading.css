@@ -19,6 +19,7 @@ body {
     font-size: 21px;
     line-height: 1.72;
     font-weight: 450;
+    letter-spacing: -0.01em;
 }
 
 .post-content,
@@ -30,7 +31,7 @@ body {
 
 /* Keep long-form reading measure in a comfortable range */
 .post-single {
-    max-width: 86ch;
+    max-width: 80ch;
     margin-inline: auto;
 }
 
