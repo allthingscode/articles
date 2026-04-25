@@ -1,4 +1,5 @@
-# You Found Markdown. You Are Not Ready for a Dark Factory.
+# You Found Markdown. 
+## You Are Not Ready for a Dark Factory.
 
 A "dark factory" is a manufacturing term: a fully automated production floor where no humans are needed on-site. No lights required. The machines run themselves. In software development, the equivalent dream is agents shipping code while you sleep — no intervention, no oversight, full velocity. That dream is worth chasing. But there's a long road between where most developers are and where that road actually starts.
 
