@@ -213,6 +213,40 @@ body {
     background: color-mix(in srgb, var(--entry) 84%, #000 16%);
 }
 
+.article-signature__header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.article-signature__name {
+    margin: 0;
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--primary);
+}
+
+.article-signature__social-link {
+    display: flex;
+    color: var(--secondary);
+    transition: color 160ms ease;
+}
+
+.article-signature__social-link:hover {
+    color: #0a66c2; /* LinkedIn Blue */
+}
+
+.article-signature__social-link svg {
+    width: 18px;
+    height: 18px;
+}
+
+:root[data-theme="dark"] .article-signature__social-link:hover {
+    color: #70b5f9; /* Lighter blue for dark mode visibility */
+}
+
 .article-signature__tagline {
     margin: 0.35rem 0 0;
     font-family: Georgia, Cambria, "Times New Roman", Times, serif;
@@ -239,23 +273,4 @@ body {
     font-weight: 700;
     color: var(--primary);
     letter-spacing: 0.05em;
-}
-
-.article-signature__link {
-    margin: 0.5rem 0 0;
-    font-size: 0.92rem;
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
-.article-signature__link a {
-    color: var(--content);
-    text-decoration: none;
-    border-bottom: 1px solid color-mix(in srgb, var(--content) 55%, transparent);
-    transition: color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
-}
-
-.article-signature__link a:hover {
-    color: var(--primary);
-    border-bottom-color: var(--hover-neon-soft);
-    box-shadow: 0 1px 0 rgba(127, 255, 212, 0.18);
 }

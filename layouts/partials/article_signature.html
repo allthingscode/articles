@@ -3,14 +3,16 @@
 {{- $linkedin := site.Params.authorLinkedin | default "" -}}
 
 <section class="article-signature" aria-label="Author signature">
-  <p class="article-signature__name">{{ $name }}</p>
+  <div class="article-signature__header">
+    <span class="article-signature__name">{{ $name }}</span>
+    {{- if $linkedin }}
+    <a class="article-signature__social-link" href="{{ $linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+      {{- partial "svg.html" (dict "name" "linkedin") -}}
+    </a>
+    {{- end }}
+  </div>
   <p class="article-signature__tagline">{{ $tagline }}</p>
   <div class="article-signature__acronym">
     <span class="acronym-label">CODE</span>: Context-driven Orchestration, Deterministic Execution
   </div>
-  {{- if $linkedin }}
-  <p class="article-signature__link">
-    <a href="{{ $linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>
-  </p>
-  {{- end }}
 </section>
