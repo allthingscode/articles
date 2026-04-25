@@ -1,8 +1,13 @@
 {{- $tagline := site.Params.articleSignature.tagline | default "The Pragmatic Agentic Solutions Architect" -}}
+{{- $name := site.Author.name | default "Matthew Hayes" -}}
 {{- $linkedin := site.Params.authorLinkedin | default "" -}}
 
 <section class="article-signature" aria-label="Author signature">
+  <p class="article-signature__name">{{ $name }}</p>
   <p class="article-signature__tagline">{{ $tagline }}</p>
+  <div class="article-signature__acronym">
+    <span class="acronym-label">CODE</span>: Context-driven Orchestration, Deterministic Execution
+  </div>
   {{- if $linkedin }}
   <p class="article-signature__link">
     <a href="{{ $linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>
