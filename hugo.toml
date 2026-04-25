@@ -16,6 +16,7 @@ theme = 'PaperMod'
 
 [author]
   name = "Matthew Hayes"
+  linkedin = "https://www.linkedin.com/in/matthew-l-hayes/"
 
 [markup]
   [markup.goldmark]

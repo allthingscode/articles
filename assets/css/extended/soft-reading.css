@@ -229,3 +229,22 @@ body {
     font-style: italic;
     color: var(--content);
 }
+
+.article-signature__link {
+    margin: 0.5rem 0 0;
+    font-size: 0.92rem;
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.article-signature__link a {
+    color: var(--content);
+    text-decoration: none;
+    border-bottom: 1px solid color-mix(in srgb, var(--content) 55%, transparent);
+    transition: color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.article-signature__link a:hover {
+    color: var(--primary);
+    border-bottom-color: var(--hover-neon-soft);
+    box-shadow: 0 1px 0 rgba(127, 255, 212, 0.18);
+}

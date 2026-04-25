@@ -1,8 +1,13 @@
 {{- $name := site.Params.author.name | default "Author" -}}
 {{- $tagline := site.Params.articleSignature.tagline | default "The Pragmatic Agentic Solutions Architect" -}}
+{{- $linkedin := site.Params.author.linkedin | default "" -}}
 
 <section class="article-signature" aria-label="Author signature">
   <p class="article-signature__name">{{ $name }}</p>
   <p class="article-signature__tagline">{{ $tagline }}</p>
+  {{- if $linkedin }}
+  <p class="article-signature__link">
+    <a href="{{ $linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>
+  </p>
+  {{- end }}
 </section>
-
