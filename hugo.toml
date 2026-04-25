@@ -1,13 +1,23 @@
 baseURL = 'https://allthingscode.github.io/articles/'
-languageCode = 'en-us'
-title = 'All Things Code Articles'
+languageCode = 'en'
+title = 'All Things Code - Articles'
 theme = 'PaperMod'
 
 [params]
   defaultTheme = "dark"
-  env = "production"
+  disableThemeToggle = true
+  disableSpecial1stPost = true
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+  ShowPostNavLinks = true
 
-[params.profileMode]
-  enabled = true
-  title = "All Things Code"
-  subtitle = "Architecting deterministic boundaries and exploring agentic development."
+  [params.articleSignature]
+    tagline = "The Pragmatic Agentic Solutions Architect (Matthew Hayes)"
+
+[author]
+  name = "Matthew Hayes"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      typographer = false

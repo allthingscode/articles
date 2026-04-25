@@ -1,0 +1,8 @@
+{{- $name := site.Params.author.name | default "Author" -}}
+{{- $tagline := site.Params.articleSignature.tagline | default "The Pragmatic Agentic Solutions Architect" -}}
+
+<section class="article-signature" aria-label="Author signature">
+  <p class="article-signature__name">{{ $name }}</p>
+  <p class="article-signature__tagline">{{ $tagline }}</p>
+</section>
+

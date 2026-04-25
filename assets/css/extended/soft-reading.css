@@ -1,0 +1,158 @@
+/* Comfort-focused readability tuning for PaperMod */
+:root[data-theme="dark"] {
+    --theme: rgb(24, 26, 30);
+    --entry: rgb(35, 37, 42);
+    --primary: rgb(220, 224, 230);
+    --content: rgb(195, 200, 206);
+    --secondary: rgb(154, 160, 170);
+    --hover-neon: #7fffd4;
+    --hover-neon-soft: rgba(127, 255, 212, 0.2);
+}
+
+:root {
+    --main-width: 1100px;
+    --nav-width: 1300px;
+}
+
+body {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 21px;
+    line-height: 1.72;
+    font-weight: 450;
+}
+
+.post-content,
+.entry-content {
+    font-size: 1.05em;
+    line-height: 1.78;
+    font-weight: 450;
+}
+
+/* Keep long-form reading measure in a comfortable range */
+.post-single {
+    max-width: 86ch;
+    margin-inline: auto;
+}
+
+.post-content p {
+    text-wrap: pretty;
+}
+
+/* Keep listing page typography aligned with article styling */
+.post-entry .entry-header h2,
+.first-entry .entry-header h1,
+.first-entry .entry-header h2 {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.post-entry .entry-content,
+.first-entry .entry-content {
+    color: var(--content);
+    font-weight: 450;
+    line-height: 1.7;
+    text-wrap: pretty;
+}
+
+.post-entry .entry-footer,
+.first-entry .entry-footer {
+    color: var(--secondary);
+}
+
+.main {
+    max-width: min(1400px, 92vw) !important;
+}
+
+.header-nav,
+.footer {
+    max-width: min(1460px, 94vw) !important;
+}
+
+/* Subtle card definition for list pages */
+:root[data-theme="dark"] .post-entry,
+:root[data-theme="dark"] .first-entry {
+    border: 1.5px solid #000;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+    transition: box-shadow 160ms ease, border-color 160ms ease;
+}
+
+:root[data-theme="dark"] .post-entry:hover,
+:root[data-theme="dark"] .first-entry:hover {
+    border-color: #000;
+    box-shadow:
+        0 1px 0 rgba(0, 0, 0, 0.35),
+        0 0 0 1px var(--hover-neon-soft),
+        0 0 18px rgba(127, 255, 212, 0.18);
+}
+
+/* Previous/next article navigation card */
+:root[data-theme="dark"] .paginav {
+    border: 1.5px solid #000;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+    background: var(--entry);
+}
+
+:root[data-theme="dark"] .paginav a {
+    background: transparent;
+    border: 1px solid transparent;
+    transition: box-shadow 160ms ease, border-color 160ms ease;
+}
+
+:root[data-theme="dark"] .paginav a + a {
+    border-left: 1.5px solid #000;
+}
+
+:root[data-theme="dark"] .paginav a:hover {
+    border-color: var(--hover-neon-soft);
+    box-shadow: 0 0 18px rgba(127, 255, 212, 0.18);
+}
+
+/* Header navigation hover on article pages */
+:root[data-theme="dark"] .post .header-nav a {
+    border: 1.5px solid transparent;
+    transition: box-shadow 160ms ease, border-color 160ms ease;
+}
+
+:root[data-theme="dark"] .post .header-nav a:hover {
+    border-color: var(--hover-neon-soft);
+    box-shadow: 0 0 18px rgba(127, 255, 212, 0.18);
+}
+
+/* Make the top "home" logo link hover more obvious */
+:root[data-theme="dark"] .header .logo a {
+    padding: 0 0.45rem;
+    border: 1.5px solid transparent;
+    border-radius: 6px;
+    transition: box-shadow 160ms ease, border-color 160ms ease;
+}
+
+:root[data-theme="dark"] .header .logo a:hover {
+    border-color: var(--hover-neon-soft);
+    box-shadow: 0 0 18px rgba(127, 255, 212, 0.18);
+}
+
+/* Global article signature block */
+.article-signature {
+    margin: 2.2rem 0 1.2rem;
+    padding: 1rem 1.2rem;
+    border: 1.5px solid #000;
+    border-radius: var(--radius);
+    background: color-mix(in srgb, var(--entry) 84%, #000 16%);
+}
+
+.article-signature__name {
+    margin: 0;
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--primary);
+}
+
+.article-signature__tagline {
+    margin: 0.35rem 0 0;
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 1.02rem;
+    font-style: italic;
+    color: var(--content);
+}
