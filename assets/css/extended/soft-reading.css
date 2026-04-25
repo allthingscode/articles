@@ -127,6 +127,7 @@ body {
 .paginav {
     border: 1.5px solid var(--border);
     transition: box-shadow 160ms ease, border-color 160ms ease;
+    overflow: hidden;
 }
 
 :root[data-theme="dark"] .paginav {
@@ -135,41 +136,64 @@ body {
     background: var(--entry);
 }
 
-:root[data-theme="dark"] .paginav a {
+.paginav a {
     background: transparent;
     border: 1px solid transparent;
-    transition: box-shadow 160ms ease, border-color 160ms ease;
+    transition: all 160ms ease;
+}
+
+.paginav a + a {
+    border-left: 1.5px solid var(--border);
 }
 
 :root[data-theme="dark"] .paginav a + a {
-    border-left: 1.5px solid #000;
+    border-left-color: #000;
+}
+
+.paginav a:hover {
+    background: rgba(0, 0, 0, 0.03);
 }
 
 :root[data-theme="dark"] .paginav a:hover {
+    background: transparent;
     border-color: var(--hover-neon-soft);
     box-shadow: 0 0 18px rgba(127, 255, 212, 0.18);
 }
 
 /* Header navigation hover on article pages */
-:root[data-theme="dark"] .post .header-nav a {
+.header-nav a {
     border: 1.5px solid transparent;
-    transition: box-shadow 160ms ease, border-color 160ms ease;
+    border-radius: 6px;
+    transition: all 160ms ease;
+    padding: 0 0.5rem;
 }
 
-:root[data-theme="dark"] .post .header-nav a:hover {
+.header-nav a:hover {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: var(--secondary);
+}
+
+:root[data-theme="dark"] .header-nav a:hover {
+    background: transparent;
     border-color: var(--hover-neon-soft);
     box-shadow: 0 0 18px rgba(127, 255, 212, 0.18);
 }
 
 /* Make the top "home" logo link hover more obvious */
-:root[data-theme="dark"] .header .logo a {
+.header .logo a {
     padding: 0 0.45rem;
     border: 1.5px solid transparent;
     border-radius: 6px;
-    transition: box-shadow 160ms ease, border-color 160ms ease;
+    transition: all 160ms ease;
+}
+
+.header .logo a:hover {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: var(--secondary);
 }
 
 :root[data-theme="dark"] .header .logo a:hover {
+    background: transparent;
     border-color: var(--hover-neon-soft);
     box-shadow: 0 0 18px rgba(127, 255, 212, 0.18);
 }
