@@ -98,6 +98,24 @@ body {
     transition: box-shadow 160ms ease, border-color 160ms ease, transform 160ms ease;
 }
 
+/* Home intro should read like a short preface, not another full article card */
+.home-info {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.home-info .entry-content {
+    margin-bottom: 0.8rem;
+}
+
+.home-info .article-signature {
+    margin: 1rem 0 0;
+}
+
+.home-info:hover {
+    transform: none;
+}
+
 /* Dark Mode Card Specifics */
 :root[data-theme="dark"] .post-entry,
 :root[data-theme="dark"] .first-entry {
