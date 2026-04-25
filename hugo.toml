@@ -1,0 +1,13 @@
+baseURL = 'https://allthingscode.github.io/articles/'
+languageCode = 'en-us'
+title = 'All Things Code Articles'
+theme = 'PaperMod'
+
+[params]
+  defaultTheme = "dark"
+  env = "production"
+
+[params.profileMode]
+  enabled = true
+  title = "All Things Code"
+  subtitle = "Architecting deterministic boundaries and exploring agentic development."
