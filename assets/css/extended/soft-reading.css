@@ -71,12 +71,19 @@ body {
     max-width: min(1460px, 94vw) !important;
 }
 
-/* Subtle card definition for list pages */
+/* Card definition for list pages - Shared Logic */
+.post-entry,
+.first-entry {
+    border: 1.5px solid var(--border);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+/* Dark Mode Card Specifics */
 :root[data-theme="dark"] .post-entry,
 :root[data-theme="dark"] .first-entry {
-    border: 1.5px solid #000;
+    border-color: #000;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
-    transition: box-shadow 160ms ease, border-color 160ms ease;
 }
 
 :root[data-theme="dark"] .post-entry:hover,
@@ -88,9 +95,22 @@ body {
         0 0 18px rgba(127, 255, 212, 0.18);
 }
 
+/* Light Mode Card Specifics */
+:root:not([data-theme="dark"]) .post-entry:hover,
+:root:not([data-theme="dark"]) .first-entry:hover {
+    border-color: var(--secondary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
+}
+
 /* Previous/next article navigation card */
+.paginav {
+    border: 1.5px solid var(--border);
+    transition: box-shadow 160ms ease, border-color 160ms ease;
+}
+
 :root[data-theme="dark"] .paginav {
-    border: 1.5px solid #000;
+    border-color: #000;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
     background: var(--entry);
 }
