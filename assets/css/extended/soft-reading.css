@@ -230,21 +230,23 @@ body {
 
 .article-signature__social-link {
     display: flex;
-    color: var(--secondary);
-    transition: color 160ms ease;
+    color: #0a66c2; /* Official LinkedIn Blue */
+    transition: transform 160ms ease, opacity 160ms ease;
+    opacity: 0.9;
 }
 
 .article-signature__social-link:hover {
-    color: #0a66c2; /* LinkedIn Blue */
+    transform: scale(1.1);
+    opacity: 1;
 }
 
 .article-signature__social-link svg {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
 }
 
-:root[data-theme="dark"] .article-signature__social-link:hover {
-    color: #70b5f9; /* Lighter blue for dark mode visibility */
+:root[data-theme="dark"] .article-signature__social-link {
+    color: #00a0dc; /* A slightly brighter blue for better contrast on dark backgrounds */
 }
 
 .article-signature__tagline {
