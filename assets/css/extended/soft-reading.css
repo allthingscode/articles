@@ -35,6 +35,26 @@ body {
 .post-single {
     max-width: 80ch;
     margin-inline: auto;
+    background: var(--entry);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2.2rem;
+    margin-top: var(--gap);
+}
+
+:root[data-theme="dark"] .post-single {
+    border-color: #000;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* Ensure code blocks match the factory aesthetic */
+.highlight {
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+}
+
+:root[data-theme="dark"] .highlight {
+    border-color: #000;
 }
 
 .post-content p {
@@ -158,8 +178,13 @@ body {
 .article-signature {
     margin: 2.2rem 0 1.2rem;
     padding: 1rem 1.2rem;
-    border: 1.5px solid #000;
+    border: 1.5px solid var(--border);
     border-radius: var(--radius);
+    background: color-mix(in srgb, var(--entry) 94%, var(--primary) 6%);
+}
+
+:root[data-theme="dark"] .article-signature {
+    border-color: #000;
     background: color-mix(in srgb, var(--entry) 84%, #000 16%);
 }
 
