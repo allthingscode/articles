@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # You Found Markdown. 
 ## You Are Not Ready for a Dark Factory.
 
