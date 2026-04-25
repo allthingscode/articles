@@ -105,7 +105,7 @@ body {
 }
 
 .home-intro-divider {
-    margin: 0 0 1.15rem;
+    margin: 0 0 1.35rem;
     border: 0;
     border-top: 1px solid var(--border);
 }
@@ -115,7 +115,7 @@ body {
 }
 
 :root:not([data-theme="dark"]) .home-intro-divider {
-    border-top-color: rgba(0, 0, 0, 0.16);
+    border-top-color: rgba(0, 0, 0, 0.28);
 }
 
 .home-info .entry-content {
