@@ -7,5 +7,6 @@
         {{ $opts := dict "display" "block" }}
         {{ .Content | $.Page.RenderString $opts }}
     </div>
+    {{- partial "article_signature.html" . -}}
 </article>
 {{- end -}}

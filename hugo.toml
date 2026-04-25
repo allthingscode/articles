@@ -17,8 +17,6 @@ theme = 'PaperMod'
     Title = "About This Site"
     Content = """
 I write about AI-assisted software development and the practical intersection of agentic systems and deterministic code. This site captures the patterns I have found, the mistakes I have seen, and the corrections that actually move work forward. I am focused on improving quality and velocity without losing engineering discipline.
-
-Connect with me on [LinkedIn](https://www.linkedin.com/in/matthew-l-hayes/).
 """
 
   [params.articleSignature]
