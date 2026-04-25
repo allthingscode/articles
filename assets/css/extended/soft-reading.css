@@ -52,7 +52,7 @@ body {
 .post-entry .entry-content,
 .first-entry .entry-content {
     color: var(--content);
-    font-weight: 450;
+    font-weight: 400;
     line-height: 1.7;
     text-wrap: pretty;
 }
