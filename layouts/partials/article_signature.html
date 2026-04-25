@@ -1,10 +1,8 @@
 {{- $tagline := site.Params.articleSignature.tagline | default "The Pragmatic Agentic Solutions Architect" -}}
-{{- $name := site.Params.author | default "Matthew Hayes" -}}
 {{- $linkedin := site.Params.authorLinkedin | default "" -}}
 
 <section class="article-signature" aria-label="Author signature">
   <div class="article-signature__header">
-    <span class="article-signature__name">{{ $name }}</span>
     {{- if $linkedin }}
     <a class="article-signature__social-link" href="{{ $linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
