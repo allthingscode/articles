@@ -114,6 +114,10 @@ body {
     border-top-color: #000;
 }
 
+:root:not([data-theme="dark"]) .home-intro-divider {
+    border-top-color: rgba(0, 0, 0, 0.16);
+}
+
 .home-info .entry-content {
     margin-bottom: 0.8rem;
 }
