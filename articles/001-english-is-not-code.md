@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # English is Not Code: Why Coding Agents are Actually Slot Machines
 
 ## 1. The Provocation
