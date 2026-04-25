@@ -2,6 +2,9 @@
 title: "You Found Markdown. You Are Not Ready for a Dark Factory."
 date: 2026-04-24T15:00:00-05:00
 draft: false
+slug: dark-factory-prerequisites
+aliases:
+  - /posts/002-dark-factory-prerequisites/
 ---
 
 A "dark factory" is a manufacturing term: a fully automated production floor where no humans are needed on-site. No lights required. The machines run themselves.

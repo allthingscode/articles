@@ -2,6 +2,9 @@
 title: "English Is Not Code: Why Coding Agents Behave Like Slot Machines"
 date: 2026-04-20T09:00:00-05:00
 draft: false
+slug: english-is-not-code
+aliases:
+  - /posts/001-english-is-not-code/
 ---
 
 ## 1. The Core Claim
@@ -94,4 +97,3 @@ I'm passionate about this new field and I'm applying these patterns for agentic 
 
 Architecting deterministic boundaries - building the "cages" that make AI safe for production - is exactly what I do.
 I help teams leverage AI while maintaining engineering integrity.
-

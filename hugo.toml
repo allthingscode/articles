@@ -24,6 +24,10 @@ I am focused on improving quality and velocity without losing engineering discip
   [params.articleSignature]
     tagline = "The Pragmatic Agentic Solutions Architect (Matthew Hayes)"
 
+[permalinks]
+  [permalinks.page]
+    posts = "/:slugorcontentbasename/"
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.extensions]
