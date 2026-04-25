@@ -104,6 +104,16 @@ body {
     padding-bottom: 1rem;
 }
 
+.home-intro-divider {
+    margin: 0 0 1.15rem;
+    border: 0;
+    border-top: 1px solid var(--border);
+}
+
+:root[data-theme="dark"] .home-intro-divider {
+    border-top-color: #000;
+}
+
 .home-info .entry-content {
     margin-bottom: 0.8rem;
 }
