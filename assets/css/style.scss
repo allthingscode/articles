@@ -2,7 +2,8 @@
 ---
 @import "{{ site.theme }}";
 
-body, .main-content {
+/* The nuclear option targeting all possible theme wrappers */
+body, .wrapper, #main_content_wrap, .main-content {
   background-color: #121212 !important;
   color: #e0e0e0 !important;
 }
