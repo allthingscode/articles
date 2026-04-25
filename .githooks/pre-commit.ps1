@@ -12,6 +12,13 @@ foreach ($file in $stagedFiles) {
     $content = git -C $repoRoot show ":$file" 2>$null | Out-String
     if ([string]::IsNullOrWhiteSpace($content)) { continue }
 
+    # Keep public markdown limited to the root README and article posts.
+    if ($file -notmatch '^(README\.md|content/posts/.*\.md)$') {
+        Write-Host "Error: Public markdown/text files are limited to README.md and content/posts/*.md. Remove internal docs from $file." -ForegroundColor Red
+        $failed = $true
+        continue
+    }
+
     if ($content -match 'via Matthew Hayes') {
         Write-Host "Error: Unauthorized signature 'via Matthew Hayes' found in $file." -ForegroundColor Red
         $failed = $true
