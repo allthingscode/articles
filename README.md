@@ -12,3 +12,11 @@
 - Keep legacy paths alive with `aliases` when a filename or previous path changes.
 - The site default theme is light. Dark mode is still available through the theme toggle or `?theme=dark`.
 
+## Collaboration Rules
+
+- Treat the work as a collaboration, not a one-way instruction queue.
+- Ask clarifying questions when the request is ambiguous, underspecified, or has meaningful tradeoffs.
+- Do not assume missing requirements if a short question will remove the risk.
+- When a change affects workflow, defaults, or user-facing behavior, confirm the intent before locking it in.
+- Prefer to interview the author up front rather than filling gaps with guesses.
+
