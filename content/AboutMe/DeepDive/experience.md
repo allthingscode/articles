@@ -1,8 +1,12 @@
+Matthew Hayes is a hands-on senior software engineer and solutions architect with over 20 years of experience building backend systems, leading technical delivery, and driving practical AI adoption.
+
+He currently works at Pinger as a Senior Member of Technical Staff, where he is leading engineering-wide AI adoption across a 5-person backend team, plus QA and other non-IT staff, using Codex CLI and Claude Code to improve software quality, delivery speed, and developer productivity.
+
 ## Pinger
 **Senior Member of Technical Staff**  
 **2022 to Present**
 
-- Leading engineering-wide AI adoption across a 5-person backend team, plus QA and other non-IT staff, to improve software quality, delivery speed, and developer productivity.
+- Leading engineering-wide AI adoption across a 5-person backend team, plus QA and other non-IT staff, using Codex CLI and Claude Code to improve software quality, delivery speed, and developer productivity.
 - Improved delivery throughput by at least 2x, based on dev points per 2-week sprint.
 - Reduced bug backlog and production release incidents while increasing test coverage by about 10%.
 - Removed dead code and obsolete API endpoints, reducing code size by about 20%.

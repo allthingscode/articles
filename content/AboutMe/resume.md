@@ -8,18 +8,19 @@ cascade:
   hiddenInHomeList: true
 ---
 
-Matthew Hayes is a senior software engineer and solutions architect with over 20 years of experience building backend systems, leading technical delivery, and driving practical AI adoption.
+Matthew Hayes is a pragmatic agentic solutions architect and hands-on senior software engineer with over 20 years of experience building backend systems, leading technical delivery, and driving practical AI adoption.
 
 ## Summary
 
 Hands-on technical leader focused on backend systems, architecture, and AI workflows. Strongest in practical delivery, delivery velocity, quality improvement, system reliability, and translating business needs into working software.
 
-Currently at Pinger, where I am leading engineering-wide AI adoption to improve software quality, delivery speed, and developer productivity.
+Currently at Pinger, where I am leading engineering-wide AI adoption across a 5-person backend team plus QA and other non-IT staff to improve software quality, delivery speed, and developer productivity.
 
 ## Core Strengths
 
 - Backend architecture and delivery
 - AI-assisted development workflows
+- Agentic workflows and AI adoption
 - Distributed and event-driven systems
 - Cloud platforms: AWS and Azure
 - Delivery velocity, quality, and reliability
@@ -27,14 +28,14 @@ Currently at Pinger, where I am leading engineering-wide AI adoption to improve 
 
 ## Selected Impact
 
-- Led engineering-wide AI adoption across a 5-person backend team, plus QA and other non-IT staff.
+- Led engineering-wide AI adoption across a 5-person backend team, plus QA and other non-IT staff, using Codex CLI and Claude Code.
 - Improved delivery throughput by at least 2x, based on dev points per 2-week sprint.
 - Reduced bug backlog and production release incidents while increasing test coverage by about 10%.
 - Removed dead code and obsolete API endpoints, reducing code size by about 20%.
 - Migrated 400k+ customer accounts to NRG SAP in 6 months at Stream.
 - Helped retire a $1M customer information system at Stream.
 - Led the technical work for Stream's enterprise migration during the NRG acquisition.
-- Built a public Go project, GoBot, as a live subject for dev factory iteration.
+- Built GoBot, a public Go project used as a live subject for dev factory iteration and practical proof of agentic delivery work.
 
 ## Professional Experience
 
@@ -80,6 +81,7 @@ Currently at Pinger, where I am leading engineering-wide AI adoption to improve 
 
 - GoBot: https://github.com/allthingscode/gobot
 - Public articles on agentic development and dev factory maturity: https://allthingscode.github.io/articles/
+- Public GitHub profile: https://github.com/allthingscode
 
 ## Education and Credentials
 

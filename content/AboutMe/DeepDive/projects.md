@@ -1,5 +1,7 @@
+These projects show the areas where Matthew Hayes adds the most value: AI adoption, backend architecture, agentic systems, public proof of work, and large-scale migration delivery.
+
 ## Agentic Engineering Program at Pinger
-- Leading engineering-wide AI adoption across a 5-person backend team, plus QA and other non-IT staff, to improve software quality, delivery speed, and developer productivity.
+- Leading engineering-wide AI adoption across a 5-person backend team, plus QA and other non-IT staff, using Codex CLI and Claude Code to improve software quality, delivery speed, and developer productivity.
 - Working to reduce technical debt and make applications more agent-centric.
 - Applying Codex CLI and Claude Code in practical engineering workflows, not as experimental tooling.
 
@@ -11,7 +13,7 @@
 ## Autonomous Dev Factory
 - Designing a fully autonomous dev factory to improve software development throughput and consistency.
 - Focused on workflow structure, deterministic handoffs, recovery, and human-supervised execution.
-- This work aligns with your broader writing and public thinking about dev factory maturity.
+- This work aligns with broader writing and public thinking about dev factory maturity.
 
 ## Messaging Backend Reaction Support at Pinger
 - Added reaction support to backend web services and storage for a messaging application.

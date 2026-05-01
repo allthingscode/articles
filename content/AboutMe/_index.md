@@ -10,11 +10,11 @@ cascade:
   hiddenInHomeList: true
 ---
 
-Matthew Hayes is a hands-on senior software engineer and solutions architect with over 20 years of experience building backend systems and leading technical delivery.
+Matthew Hayes is a hands-on senior software engineer and pragmatic agentic solutions architect with over 20 years of experience building backend systems, leading technical delivery, and driving practical AI adoption.
 
 {{< figure src="/articles/images/aboutme-portrait.jpg" alt="AI-generated portrait of Matthew Hayes" class="aboutme-portrait" caption="AI-generated. This is what I look like, but I don't actually have an Android doing all the work." >}}
 
-He currently focuses on backend systems, architecture, and agentic workflows. At Pinger, he is leading engineering-wide AI adoption to improve software quality, delivery speed, and developer productivity.
+He currently focuses on backend systems, architecture, and agentic workflows. At Pinger, he is leading engineering-wide AI adoption across a 5-person backend team plus QA and other non-IT staff to improve software quality, delivery speed, and developer productivity.
 
 His public work includes GoBot, a public Go project used as a live subject for dev factory iteration, and a growing body of writing on agentic development and dev factory maturity.
 

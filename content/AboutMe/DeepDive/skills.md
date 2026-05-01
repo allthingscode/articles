@@ -1,3 +1,5 @@
+Core technical skills and keywords associated with Matthew Hayes:
+
 ## Architecture and System Design
 - Backend architecture
 - Application design
@@ -44,6 +46,9 @@
 ## Agentic Work
 - AI workflows
 - Agentic systems
+- Prompt engineering
+- Codex CLI
+- Claude Code
 - LLM routing
 - Local orchestration engines
 - Developer productivity tooling

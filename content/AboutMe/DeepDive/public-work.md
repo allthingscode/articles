@@ -1,3 +1,5 @@
+These public artifacts show practical, hands-on proof of the work:
+
 ## GoBot
 - GoBot is a public Go project used as a live subject for dev factory iteration: https://github.com/allthingscode/gobot
 - It demonstrates recursive improvement through the dev factory and provides public proof of practical agentic delivery work.
