@@ -96,3 +96,114 @@ figure.aboutme-portrait figcaption {
     font-size: 0.92rem;
     line-height: 1.5;
 }
+
+body.aboutme-resume .post-entry,
+body.aboutme-resume .post-single {
+    max-width: 820px;
+}
+
+body.aboutme-resume .post-title {
+    margin-bottom: 0.35rem;
+}
+
+body.aboutme-resume .resume-actions {
+    margin: 0.9rem 0 1.25rem;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--theme) 96%, var(--border) 4%);
+    font-size: 0.92rem;
+    line-height: 1.45;
+}
+
+body.aboutme-resume .resume-actions p {
+    margin: 0;
+}
+
+body.aboutme-resume .post-content > p:nth-of-type(2),
+body.aboutme-resume .post-content > p:nth-of-type(3) {
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    font-size: 0.92rem;
+}
+
+body.aboutme-resume .post-content {
+    font-size: 0.98rem;
+    line-height: 1.5;
+}
+
+body.aboutme-resume .post-content h2 {
+    font-size: 1.25rem;
+    margin-top: 1.4rem;
+}
+
+body.aboutme-resume .post-content h3 {
+    font-size: 1.02rem;
+    margin-top: 1rem;
+}
+
+body.aboutme-resume .post-content ul {
+    margin-top: 0.4rem;
+    margin-bottom: 0.85rem;
+}
+
+body.aboutme-resume .post-content li {
+    margin-bottom: 0.18rem;
+}
+
+@media print {
+    @page {
+        margin: 0.45in;
+    }
+
+    body.aboutme-resume .resume-actions,
+    body.aboutme-resume .post-content > p:nth-of-type(2),
+    body.aboutme-resume .post-content > p:nth-of-type(3),
+    body.aboutme-resume .share-buttons,
+    body.aboutme-resume .post-footer,
+    body.aboutme-resume .top-link,
+    body.aboutme-resume .terms,
+    body.aboutme-resume .breadcrumbs {
+        display: none !important;
+    }
+
+    body.aboutme-resume .post-entry,
+    body.aboutme-resume .post-single {
+        max-width: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    body.aboutme-resume .post-title {
+        font-size: 20pt;
+        line-height: 1.08;
+        margin: 0 0 0.2in;
+    }
+
+    body.aboutme-resume .post-content {
+        font-size: 9.75pt;
+        line-height: 1.25;
+    }
+
+    body.aboutme-resume .post-content h2 {
+        font-size: 12.5pt;
+        margin-top: 0.18in;
+        margin-bottom: 0.06in;
+    }
+
+    body.aboutme-resume .post-content h3 {
+        font-size: 10.75pt;
+        margin-top: 0.12in;
+        margin-bottom: 0.04in;
+    }
+
+    body.aboutme-resume .post-content p,
+    body.aboutme-resume .post-content ul {
+        margin-top: 0.06in;
+        margin-bottom: 0.06in;
+    }
+
+    body.aboutme-resume .post-content li {
+        margin-bottom: 0.05in;
+    }
+}
