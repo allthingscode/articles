@@ -1,3 +1,10 @@
+---
+title: "DeepDive Prompt"
+slug: deepdive
+draft: false
+hiddenInHomeList: true
+---
+
 # DeepDive Prompt
 
 Use the files in this folder as source material about Matthew Hayes.

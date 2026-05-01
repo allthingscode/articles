@@ -5,6 +5,9 @@ draft: false
 slug: about-me
 aliases:
   - /about/
+hiddenInHomeList: true
+cascade:
+  hiddenInHomeList: true
 ---
 
 # About Me
