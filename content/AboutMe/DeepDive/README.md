@@ -1,10 +1,3 @@
----
-title: "DeepDive Prompt"
-slug: deepdive
-draft: false
-url: /about-me/deepdive/
----
-
 # DeepDive Prompt
 
 Use the files in this folder as source material about Matthew Hayes.

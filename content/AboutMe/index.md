@@ -3,7 +3,6 @@ title: "About Me"
 date: 2026-04-29T22:00:00-05:00
 draft: false
 slug: about-me
-url: /about-me/
 aliases:
   - /about/
 ---
@@ -22,14 +21,14 @@ He is targeting roles such as AI / Agentic Solutions Architect, or a higher-leve
 
 ## DeepDive
 
-- Start here: [DeepDive Prompt](deepdive/)
-- [Overview](deepdive/overview/)
-- [Experience](deepdive/experience/)
-- [Projects](deepdive/projects/)
-- [Public Work](deepdive/public-work/)
-- [Skills](deepdive/skills/)
-- [Leadership](deepdive/leadership/)
-- [Credentials](deepdive/credentials/)
-- [Military](deepdive/military/)
-- [Values](deepdive/values/)
-- [FAQ](deepdive/faq/)
+- Start here: [DeepDive README](DeepDive/README.md)
+- [Overview](DeepDive/overview.md)
+- [Experience](DeepDive/experience.md)
+- [Projects](DeepDive/projects.md)
+- [Public Work](DeepDive/public-work.md)
+- [Skills](DeepDive/skills.md)
+- [Leadership](DeepDive/leadership.md)
+- [Credentials](DeepDive/credentials.md)
+- [Military](DeepDive/military.md)
+- [Values](DeepDive/values.md)
+- [FAQ](DeepDive/faq.md)
