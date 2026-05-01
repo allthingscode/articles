@@ -1,0 +1,55 @@
+body.aboutme-deepdive-prompt .highlight,
+body.aboutme-deepdive-prompt pre {
+    position: relative;
+}
+
+body.aboutme-deepdive-prompt .highlight pre,
+body.aboutme-deepdive-prompt .highlight code,
+body.aboutme-deepdive-prompt pre {
+    background: #f8fafc !important;
+    color: #111827 !important;
+}
+
+body.aboutme-deepdive-prompt .highlight *,
+body.aboutme-deepdive-prompt pre * {
+    color: #111827 !important;
+    text-shadow: none !important;
+}
+
+body.aboutme-deepdive-prompt .highlight pre {
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+}
+
+body.aboutme-deepdive-prompt .copy-code {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.35rem;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: #111827;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
+    z-index: 2;
+}
+
+body.aboutme-deepdive-prompt .copy-code:hover {
+    background: #ffffff;
+}
+
+body.aboutme-deepdive-prompt .copy-code::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'%3E%3Cpath d='M16 1H8a2 2 0 0 0-2 2v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2h1a2 2 0 0 0 2-2V5a4 4 0 0 0-4-4Zm-2 19H5V7h1v8a2 2 0 0 0 2 2h6v3ZM8 15V3h8a2 2 0 0 1 2 2v10H8Z'/%3E%3C/svg%3E") no-repeat center / contain;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'%3E%3Cpath d='M16 1H8a2 2 0 0 0-2 2v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2h1a2 2 0 0 0 2-2V5a4 4 0 0 0-4-4Zm-2 19H5V7h1v8a2 2 0 0 0 2 2h6v3ZM8 15V3h8a2 2 0 0 1 2 2v10H8Z'/%3E%3C/svg%3E") no-repeat center / contain;
+}

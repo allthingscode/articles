@@ -3,6 +3,7 @@ title: "DeepDive Prompt"
 slug: deepdive
 draft: false
 hiddenInHomeList: true
+bodyClass: aboutme-deepdive-prompt
 ---
 
 Copy/paste this prompt into your AI client:
