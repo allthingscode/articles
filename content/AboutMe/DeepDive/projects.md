@@ -21,7 +21,7 @@ These projects show the areas where Matthew Hayes adds the most value: AI adopti
 - Demonstrates practical feature delivery in a live production environment.
 
 ## Griddy Tax Calculation API Service
-- Created a multi-threaded tax calculation API service in Go.
+- Created a multi-threaded tax calculation API service in Go that produced meaningful business savings.
 - Produced meaningful business savings through backend automation and better calculation workflows.
 - Demonstrates practical backend engineering with direct business impact.
 
