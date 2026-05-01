@@ -24,6 +24,7 @@ He is targeting roles such as AI / Agentic Solutions Architect, or a higher-leve
 
 ## DeepDive
 
+- [Resume](resume/)
 - Start here: [DeepDive Prompt](deepdive/)
 - [Overview](deepdive/overview/)
 - [Experience](deepdive/experience/)
