@@ -12,15 +12,15 @@ Matthew Hayes is a pragmatic agentic solutions architect and hands-on senior sof
 
 ## Summary
 
-Hands-on technical leader focused on backend systems, architecture, and AI workflows. Strongest in practical delivery, delivery velocity, quality improvement, system reliability, and translating business needs into working software.
+Hands-on technical leader focused on backend systems, architecture, and agentic AI workflows. Strongest in practical delivery, system reliability, quality improvement, and translating business needs into working software.
 
-Currently at Pinger, where I am leading engineering-wide AI adoption across a 5-person backend team plus QA and other non-IT staff to improve software quality, delivery speed, and developer productivity.
+Currently at Pinger, where I am leading engineering-wide AI adoption across a 5-person backend team plus QA and other non-IT staff using Codex CLI and Claude Code to improve software quality, delivery speed, and developer productivity.
 
 ## Core Strengths
 
 - Backend architecture and delivery
-- AI-assisted development workflows
-- Agentic workflows and AI adoption
+- AI-assisted development and agentic workflows
+- AI adoption and developer productivity
 - Distributed and event-driven systems
 - Cloud platforms: AWS and Azure
 - Delivery velocity, quality, and reliability
@@ -28,10 +28,11 @@ Currently at Pinger, where I am leading engineering-wide AI adoption across a 5-
 
 ## Selected Impact
 
-- Led engineering-wide AI adoption across a 5-person backend team, plus QA and other non-IT staff, using Codex CLI and Claude Code.
+- Led engineering-wide AI adoption across a 5-person backend team, plus QA and other non-IT staff, using Codex CLI and Claude Code to design agentic workflows that improved software quality, delivery speed, and developer productivity.
 - Improved delivery throughput by at least 2x, based on dev points per 2-week sprint.
 - Reduced bug backlog and production release incidents while increasing test coverage by about 10%.
 - Removed dead code and obsolete API endpoints, reducing code size by about 20%.
+- Mentored engineers and QA on prompt engineering, agentic development patterns, and responsible AI usage.
 - Migrated 400k+ customer accounts to NRG SAP in 6 months at Stream.
 - Helped retire a $1M customer information system at Stream.
 - Led the technical work for Stream's enterprise migration during the NRG acquisition.
@@ -52,8 +53,8 @@ Currently at Pinger, where I am leading engineering-wide AI adoption across a 5-
 **Senior Solutions Architect**  
 2021 to 2022
 
-- Architected and deployed serverless data processing pipelines using Azure Functions.
-- Automated reporting for billing, accounting, auditing, wholesale purchasing, usage analytics, and forecasting.
+- Architected and deployed serverless, event-driven data processing pipelines using Azure Functions.
+- Automated reporting for billing, accounting, auditing, wholesale purchasing, usage analytics, and forecasting to improve data availability and decision-making.
 - Set up Azure resources to support SQL Server replication and reporting.
 
 ### Griddy
@@ -61,7 +62,7 @@ Currently at Pinger, where I am leading engineering-wide AI adoption across a 5-
 2020 to 2021
 
 - Designed and deployed production backend services in Go and Python.
-- Built systems that supported customer operations and internal business processes.
+- Built systems that supported customer operations, internal business processes, and meaningful business savings.
 
 ### Stream
 **Senior Solutions Architect**  

@@ -4,6 +4,8 @@ Core technical skills and keywords associated with Matthew Hayes:
 - Backend architecture
 - Application design
 - Solution design
+- Cloud-native architecture
+- Serverless architecture
 - Distributed systems
 - Event-driven systems
 - Microservices
