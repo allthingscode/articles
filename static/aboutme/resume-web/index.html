@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matthew Hayes — Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #d8d8d5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px 80px;
+      font-family: 'Barlow', sans-serif;
+    }
+    .resume-page {
+      width: 794px;
+      min-height: 1123px;
+      background: #fafaf8;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.18);
+      margin: 0 auto 32px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      page-break-after: always;
+    }
+    .resume-page:last-child { margin-bottom: 0; page-break-after: auto; }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .resume-page { box-shadow: none !important; margin: 0 !important; }
+      .no-print { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useState } = React;
+
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "headerColor": "#12224a",
+  "accentColor": "#2c3e6b",
+  "bodyBg": "#fafaf8",
+  "nameSize": 56,
+  "showPhoto": true
+}/*EDITMODE-END*/;
+
+/* ── design tokens ─────────────────────────────────────────── */
+const SIDEBAR_W = 216;
+const PAD_SIDE  = 22;
+const PAD_MAIN  = 22;
+
+/* ── data ──────────────────────────────────────────────────── */
+const DATA = {
+  name:     ["MATTHEW", "HAYES"],
+  tagline:  "The Pragmatic Agentic Solutions Architect",
+  contact: {
+    location: "Sachse, TX 75048",
+    phone:    "(972) 292-8286",
+    email:    "matthew@allthingscode.com",
+    linkedin: "linkedin.com/in/matthew-l-hayes",
+    github:   "github.com/allthingscode",
+    web:      "allthingscode.github.io/articles",
+  },
+  summary: "Pragmatic Agentic Solutions Architect and senior software engineer with 20+ years building scalable backend systems, leading technical delivery, and driving enterprise AI adoption. Currently leading engineering-wide AI integration at Pinger using Claude Code and Codex CLI — achieving 2× delivery throughput, ~10% higher test coverage, and fewer production incidents. Excelled in complex enterprise migrations (400k+ customer accounts to SAP with zero billing disruption) and delivered $1.5M+/yr in cost savings. Seeking AI/Agentic Solutions Architect or senior technical leadership roles focused on agentic workflows, cloud-native architecture, and accelerating developer productivity.",
+  impact: [
+    "Improved delivery throughput by 2× (dev points per sprint) at Pinger via AI-assisted workflows",
+    "Migrated 400k+ customer accounts to NRG SAP in 6 months at Stream — zero billing disruption",
+    "Retired a $1M customer information system during the Stream / NRG acquisition",
+    "Reduced code size ~20% by removing dead code and obsolete API endpoints",
+    "Delivered $1.5M+/yr in cost savings through improved auditing and operational efficiency in earlier roles",
+    "Supported a 90-day Azure carveout for non-energy resources during the Stream acquisition split",
+  ],
+  skills: {
+    "Languages":     ["Go", "Python", "PHP", "SQL", "Perl"],
+    "Cloud & Infra": ["AWS", "Azure", "Azure Functions", "Docker", "Linux / Bash"],
+    "AI & Agents":   ["Claude Code", "Codex CLI", "Gemini CLI", "Agentic Workflows", "Multi-Agent Systems", "Prompt Engineering", "LLM Integration"],
+    "Data & Systems":["PostgreSQL", "MySQL", "SQL Server", "Event-driven Architecture", "Web Services"],
+    "Leadership":    ["Technical Strategy", "Team Mentoring", "Delivery Velocity", "Cross-functional Alignment"],
+  },
+  certs: [
+    "AWS Certified Cloud Practitioner",
+    "Zend Certified Engineer",
+  ],
+  education: {
+    degree: "BS, Computer Science",
+    school: "University of Texas, Dallas, TX",
+  },
+  military: {
+    branch: "US Army — 82nd Airborne Division",
+    period: "Fort Bragg, NC",
+    bullets: [
+      "Served in the 82nd Airborne Division.",
+      "Led men under pressure; earned numerous awards and medals for outstanding service.",
+    ]
+  },
+  publicWork: [
+    { name: "GoBot", url: "github.com/allthingscode/gobot", desc: "Public Go project — live testbed for agentic dev factory patterns. Demonstrates practical AI-augmented development in a real codebase." },
+    { name: "Articles", url: "allthingscode.github.io/articles", desc: "Growing body of writing on agentic development, dev factory maturity, and practical AI adoption." },
+  ],
+  experience: [
+    {
+      company:  "Pinger",
+      roles: [{
+        title:  "Senior Member of Technical Staff",
+        period: "2022 – Present",
+        bullets: [
+          "Led engineering-wide AI adoption across a 5-person backend team, QA, and non-IT staff using Claude Code, Codex CLI, and agentic workflows — establishing AI-augmented processes that delivered 2× throughput (dev points per sprint), increased test coverage by ~10%, and reduced production incidents.",
+          "Drove code quality and maintainability by identifying and removing dead code and obsolete API endpoints, shrinking the codebase by ~20% while improving developer velocity and long-term sustainability.",
+          "Mentored engineers on prompt engineering, agentic development patterns, and responsible AI usage — successfully shifting the team from traditional coding to collaborative AI-augmented delivery.",
+          "Iterated on the public GoBot project (github.com/allthingscode/gobot) as a live testbed for agentic development and dev factory maturity patterns.",
+        ]
+      }]
+    },
+    {
+      company: "JP Energy Resources",
+      roles: [{
+        title:  "Senior Solutions Architect",
+        period: "2021 – 2022",
+        bullets: [
+          "Architected and deployed serverless event-driven data pipelines using Azure Functions, automating reporting for billing, accounting, auditing, wholesale purchasing, usage analytics, and demand forecasting — dramatically improving data availability, analytics speed, and operational decision-making.",
+          "Established SQL Server replication and Azure infrastructure to support scalable, reliable reporting across distributed business systems.",
+        ]
+      }]
+    },
+    {
+      company: "Griddy",
+      roles: [{
+        title:  "Senior Software Engineer",
+        period: "2020 – 2021",
+        bullets: [
+          "Designed and deployed production-grade Go and Python microservices supporting customer service and enterprise operations at scale.",
+          "Delivered a complex internal tax calculation service that generated significant, measurable business savings.",
+        ]
+      }]
+    },
+  ],
+  stream: {
+    company: "Stream Energy (now Ignite International)",
+    highlight: "13 years · 4 progressive roles · $1M+ system retired · 400k+ accounts migrated",
+    roles: [
+      {
+        title:  "Senior Solutions Architect",
+        period: "2016 – 2020",
+        bullets: [
+          "Served as the primary hands-on technical architect for a major enterprise migration during the NRG acquisition.",
+          "Migrated 400k+ customer accounts to SAP in 6 months — zero disruption to active billing cycles.",
+          "Retired a $1M legacy customer information system safely and on schedule.",
+          "Supported a 90-day Azure carveout for non-energy resources during the acquisition split.",
+          "Improved billing, reporting, and system scalability for a multi-million-dollar retail energy business.",
+        ]
+      },
+      {
+        title:  "Manager, Software Development",
+        period: "2011 – 2016",
+        bullets: [
+          "Led a team of software engineers while remaining heavily hands-on in development.",
+          "Translated business priorities into actionable technical designs and delivery plans.",
+          "Broke down complex work and drove team velocity across multi-year product initiatives.",
+        ]
+      },
+      {
+        title:  "Lead Software Engineer",
+        period: "2010 – 2011",
+        bullets: [
+          "Refactored and optimized legacy billing engines and customer support applications.",
+          "Improved scalability, performance, and operational visibility of core systems.",
+        ]
+      },
+      {
+        title:  "Senior Software Engineer",
+        period: "2007 – 2010",
+        bullets: [
+          "Built and supported backend systems in a large enterprise retail energy environment.",
+          "Contributed to the technical foundation that later supported broader architecture and modernization work.",
+        ]
+      },
+    ]
+  },
+  earlier: "Additional earlier roles at HRSmart, Dynamex, and other organizations — building the long-term foundation in backend systems, architecture, and delivery. This period also includes work that contributed to more than $1.5M/year in cost savings through improved auditing and operational efficiency.",
+};
+
+/* ── shared components ─────────────────────────────────────── */
+function PhotoPlaceholder({ size = 90, width, height }) {
+  const w = width || size;
+  const h = height || size;
+  return (
+    <div style={{
+      width: w, height: h, borderRadius: 3, flexShrink: 0,
+      overflow: 'hidden',
+      border: '2px solid rgba(255,255,255,0.22)',
+    }}>
+      <img src="uploads/1000007237_profile.jpg" alt="Matthew Hayes" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%' }} />
+    </div>
+  );
+}
+
+function SectionHeader({ children, accent, small }) {
+  return (
+    <div style={{ marginBottom: small ? 6 : 8, marginTop: 2 }}>
+      <div style={{
+        fontSize: small ? 8.5 : 9.5,
+        fontWeight: 700,
+        letterSpacing: '0.2em',
+        textTransform: 'uppercase',
+        color: accent,
+        fontFamily: 'Barlow, sans-serif',
+        marginBottom: 3,
+      }}>{children}</div>
+      <div style={{ height: 1, background: accent, opacity: 0.2 }} />
+    </div>
+  );
+}
+
+function Bullets({ items, size = 9 }) {
+  return (
+    <ul style={{ paddingLeft: 13, margin: '3px 0 0' }}>
+      {items.map((b, i) => (
+        <li key={i} style={{ fontSize: size, lineHeight: 1.55, color: '#2a2a2a', marginBottom: 2.5 }}>{b}</li>
+      ))}
+    </ul>
+  );
+}
+
+function RoleBlock({ role, accent, size = 9 }) {
+  return (
+    <div style={{ marginBottom: 10 }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 6 }}>
+        <div style={{ fontSize: 10.5, fontWeight: 700, color: '#111', lineHeight: 1.25 }}>{role.title}</div>
+        <div style={{ fontSize: 8.5, color: '#888', whiteSpace: 'nowrap', flexShrink: 0 }}>{role.period}</div>
+      </div>
+      <Bullets items={role.bullets} size={size} />
+    </div>
+  );
+}
+
+function CompanyBlock({ job, accent }) {
+  return (
+    <div style={{ marginBottom: 16 }}>
+      <div style={{ fontSize: 11, fontWeight: 800, color: accent, marginBottom: 6, letterSpacing: '0.02em' }}>
+        {job.company}
+      </div>
+      {job.roles.map((r, i) => <RoleBlock key={i} role={r} accent={accent} />)}
+    </div>
+  );
+}
+
+/* ── PAGE 1 ────────────────────────────────────────────────── */
+function Page1({ t }) {
+  const { headerColor, accentColor, bodyBg, nameSize, showPhoto } = t;
+
+  return (
+    <div className="resume-page" style={{ background: bodyBg }}>
+      {/* HEADER */}
+      <div style={{
+        background: headerColor,
+        padding: '28px 32px 24px',
+        display: 'flex', alignItems: 'center', gap: 24,
+      }}>
+        {showPhoto && <PhotoPlaceholder width={72} height={96} />}
+        <div style={{ flex: 1 }}>
+          <div style={{
+            fontFamily: 'Barlow Condensed, Barlow, sans-serif',
+            fontSize: nameSize,
+            fontWeight: 800,
+            color: '#fff',
+            lineHeight: 0.92,
+            letterSpacing: '-0.01em',
+            textTransform: 'uppercase',
+          }}>
+            {DATA.name[0]}<br />{DATA.name[1]}
+          </div>
+          <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.6)', marginTop: 7, letterSpacing: '0.08em', fontStyle: 'italic' }}>
+            {DATA.tagline}
+          </div>
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 3.5, alignItems: 'flex-end', fontSize: 9, color: 'rgba(255,255,255,0.78)', lineHeight: 1.5, flexShrink: 0, minWidth: 200 }}>
+          <span style={{ whiteSpace: 'nowrap' }}>{DATA.contact.location}</span>
+          <span style={{ whiteSpace: 'nowrap' }}>{DATA.contact.phone}</span>
+          <span style={{ whiteSpace: 'nowrap' }}>{DATA.contact.email}</span>
+          <span style={{ whiteSpace: 'nowrap' }}>{DATA.contact.linkedin}</span>
+          <span style={{ whiteSpace: 'nowrap' }}>{DATA.contact.github}</span>
+          <span style={{ whiteSpace: 'nowrap' }}>{DATA.contact.web}</span>
+        </div>
+      </div>
+
+      {/* BODY */}
+      <div style={{ display: 'flex', flex: 1 }}>
+        {/* SIDEBAR */}
+        <div style={{
+          width: SIDEBAR_W, flexShrink: 0,
+          borderRight: '1px solid #e4e0da',
+          padding: `20px ${PAD_SIDE}px 20px ${PAD_SIDE}px`,
+          display: 'flex', flexDirection: 'column', gap: 18,
+        }}>
+          {/* Skills */}
+          <div>
+            <SectionHeader accent={accentColor}>Skills</SectionHeader>
+            {Object.entries(DATA.skills).map(([cat, items]) => (
+              <div key={cat} style={{ marginBottom: 8 }}>
+                <div style={{ fontSize: 8.5, fontWeight: 700, color: '#555', letterSpacing: '0.06em', marginBottom: 3, textTransform: 'uppercase' }}>{cat}</div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                  {items.map(s => (
+                    <div key={s} style={{
+                      fontSize: 8.5,
+                      color: '#333',
+                      lineHeight: 1.5,
+                      paddingLeft: 8,
+                      borderLeft: `2px solid ${accentColor}`,
+                    }}>{s}</div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Education */}
+          <div>
+            <SectionHeader accent={accentColor}>Education</SectionHeader>
+            <div style={{ fontSize: 10, fontWeight: 700, color: '#111', lineHeight: 1.3 }}>{DATA.education.degree}</div>
+            <div style={{ fontSize: 9, color: accentColor, fontWeight: 600, marginTop: 2 }}>{DATA.education.school}</div>
+          </div>
+
+          {/* Certifications */}
+          <div>
+            <SectionHeader accent={accentColor}>Certifications</SectionHeader>
+            {DATA.certs.map((c, i) => (
+              <div key={i} style={{ fontSize: 9, color: '#333', marginBottom: 5, paddingLeft: 8, borderLeft: `2px solid ${accentColor}`, lineHeight: 1.4 }}>{c}</div>
+            ))}
+          </div>
+
+          {/* Public Work */}
+          <div>
+            <SectionHeader accent={accentColor}>Public Work</SectionHeader>
+            {DATA.publicWork.map((w, i) => (
+              <div key={i} style={{ marginBottom: 8 }}>
+                <div style={{ fontSize: 9.5, fontWeight: 700, color: accentColor }}>{w.name}</div>
+                <div style={{ fontSize: 8.5, color: '#888', marginBottom: 2 }}>{w.url}</div>
+                <div style={{ fontSize: 8.5, color: '#444', lineHeight: 1.5 }}>{w.desc}</div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+
+        {/* MAIN */}
+        <div style={{ flex: 1, padding: `20px ${PAD_MAIN}px 20px ${PAD_MAIN}px`, display: 'flex', flexDirection: 'column', gap: 16 }}>
+          {/* Summary */}
+          <div>
+            <SectionHeader accent={accentColor}>Summary</SectionHeader>
+            <p style={{ fontSize: 9.5, lineHeight: 1.65, color: '#333', marginTop: 2, textWrap: 'pretty' }}>{DATA.summary}</p>
+          </div>
+
+          {/* Selected Impact */}
+          <div>
+            <SectionHeader accent={accentColor}>Selected Impact</SectionHeader>
+            <Bullets items={DATA.impact} size={9.5} />
+          </div>
+
+          {/* Experience */}
+          <div>
+            <SectionHeader accent={accentColor}>Experience</SectionHeader>
+            {DATA.experience.map((job, i) => <CompanyBlock key={i} job={job} accent={accentColor} />)}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ── PAGE 2 ────────────────────────────────────────────────── */
+function Page2({ t }) {
+  const { headerColor, accentColor, bodyBg } = t;
+
+  return (
+    <div className="resume-page" style={{ background: bodyBg }}>
+      {/* Mini header strip */}
+      <div style={{
+        background: headerColor,
+        padding: '10px 24px',
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16,
+      }}>
+        <div style={{
+          fontFamily: 'Barlow Condensed, Barlow, sans-serif',
+          fontSize: 22, fontWeight: 800, color: '#fff', letterSpacing: '0.02em', textTransform: 'uppercase',
+        }}>Matthew Hayes <span style={{ opacity: 0.5, fontSize: 14, fontWeight: 400 }}>— continued</span></div>
+        <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.6)', flex: 1, textAlign: 'right' }}>{DATA.contact.phone} · {DATA.contact.email} · {DATA.contact.linkedin}</div>
+        <div style={{ width: 60, height: 60, borderRadius: 3, overflow: 'hidden', flexShrink: 0, border: '2px solid rgba(255,255,255,0.2)' }}>
+          <img src="uploads/Gemini_Generated_Image_59ghl859ghl859gh_Cropped.png" alt="Matthew Hayes" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }} />
+        </div>
+      </div>
+
+      {/* BODY */}
+      <div style={{ display: 'flex', flex: 1 }}>
+        {/* SIDEBAR — context / values */}
+        <div style={{
+          width: SIDEBAR_W, flexShrink: 0,
+          borderRight: '1px solid #e4e0da',
+          padding: `22px ${PAD_SIDE}px 22px ${PAD_SIDE}px`,
+          display: 'flex', flexDirection: 'column', gap: 18,
+        }}>
+          <div>
+            <SectionHeader accent={accentColor}>About Stream</SectionHeader>
+            <p style={{ fontSize: 9, lineHeight: 1.6, color: '#444', textWrap: 'pretty' }}>
+              Stream Energy (now Ignite International) was a retail energy and direct-sales company operating in multiple US states. Matthew joined early — rising through four progressive technical roles over 13 years, from Senior Software Engineer to Senior Solutions Architect.
+            </p>
+          </div>
+
+          <div>
+            <SectionHeader accent={accentColor}>Stream at a Glance</SectionHeader>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px 10px' }}>
+              {[
+                ["13 years", "at Stream, 4 roles"],
+                ["400k+", "accounts migrated"],
+                ["$1M+", "legacy CIS retired"],
+                ["6 months", "SAP migration"],
+                ["90 days", "Azure carveout"],
+                ["$1.5M+/yr", "cost savings"],
+              ].map(([val, label]) => (
+                <div key={val} style={{
+                  background: `${accentColor}0e`,
+                  borderRadius: 3,
+                  padding: '6px 8px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 2,
+                }}>
+                  <div style={{ fontSize: 13, fontWeight: 800, color: accentColor, lineHeight: 1, letterSpacing: '-0.01em' }}>{val}</div>
+                  <div style={{ fontSize: 8, color: '#555', lineHeight: 1.35 }}>{label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <SectionHeader accent={accentColor}>Core Strengths</SectionHeader>
+            <ul style={{ paddingLeft: 0, listStyle: 'none', margin: 0 }}>
+              {[
+                "Backend architecture & delivery",
+                "AI-assisted dev workflows",
+                "Distributed & event-driven systems",
+                "Delivery velocity & reliability",
+                "Technical leadership & mentoring",
+                "Cloud platforms: AWS & Azure",
+                "Enterprise migrations & integrations",
+              ].map((s, i) => (
+                <li key={i} style={{
+                  fontSize: 9,
+                  color: '#333',
+                  lineHeight: 1.45,
+                  marginBottom: 5,
+                  paddingLeft: 10,
+                  borderLeft: `2px solid ${accentColor}`,
+                }}>{s}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <SectionHeader accent={accentColor}>Earlier Experience</SectionHeader>
+            <p style={{ fontSize: 8.5, lineHeight: 1.6, color: '#555', textWrap: 'pretty' }}>{DATA.earlier}</p>
+          </div>
+
+          <div>
+            <SectionHeader accent={accentColor}>Military Service</SectionHeader>
+            <div style={{ fontSize: 9.5, fontWeight: 700, color: '#111' }}>{DATA.military.branch}</div>
+            <div style={{ fontSize: 8.5, color: '#888', marginBottom: 4 }}>{DATA.military.period}</div>
+            <Bullets items={DATA.military.bullets} size={8.5} />
+          </div>
+        </div>
+
+        {/* MAIN — Stream full history */}
+        <div style={{ flex: 1, padding: `22px ${PAD_MAIN}px 22px ${PAD_MAIN}px` }}>
+          {/* Stream heading */}
+          <div style={{ marginBottom: 14 }}>
+            <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 8 }}>
+              <div style={{ fontSize: 14, fontWeight: 800, color: accentColor, letterSpacing: '0.02em' }}>
+                {DATA.stream.company}
+              </div>
+              <div style={{ fontSize: 8.5, color: '#888', fontStyle: 'italic', flexShrink: 0 }}>2007 – 2020</div>
+            </div>
+            <div style={{
+              marginTop: 6, marginBottom: 12,
+              background: `${accentColor}12`,
+              borderLeft: `3px solid ${accentColor}`,
+              padding: '6px 10px',
+              fontSize: 9,
+              color: accentColor,
+              fontWeight: 600,
+              letterSpacing: '0.04em',
+            }}>
+              {DATA.stream.highlight}
+            </div>
+            <div style={{ height: 1, background: accentColor, opacity: 0.15, marginBottom: 14 }} />
+          </div>
+
+          {DATA.stream.roles.map((role, i) => (
+            <div key={i} style={{
+              marginBottom: 16,
+              paddingBottom: i < DATA.stream.roles.length - 1 ? 16 : 0,
+              borderBottom: i < DATA.stream.roles.length - 1 ? `1px dashed #e0dbd4` : 'none',
+            }}>
+              <div style={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                gap: 8,
+                marginBottom: 6,
+                flexWrap: 'nowrap',
+              }}>
+                <div style={{ fontSize: 11, fontWeight: 700, color: '#111', lineHeight: 1.3, flex: 1 }}>{role.title}</div>
+                <div style={{
+                  fontSize: 8.5, color: '#fff', background: accentColor,
+                  padding: '2px 8px', borderRadius: 2, flexShrink: 0, fontWeight: 600,
+                  whiteSpace: 'nowrap',
+                }}>{role.period}</div>
+              </div>
+              <Bullets items={role.bullets} size={9.5} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ── APP ───────────────────────────────────────────────────── */
+function App() {
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+
+  return (
+    <>
+      <div className="no-print" style={{ marginBottom: 20, textAlign: 'center' }}>
+        <span style={{ fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#999', fontFamily: 'Barlow, sans-serif', fontWeight: 600 }}>
+          Matthew Hayes · Resume · 2026 · Page 1 of 2
+        </span>
+      </div>
+
+      <Page1 t={t} />
+
+      <div className="no-print" style={{ margin: '8px 0', textAlign: 'center' }}>
+        <span style={{ fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#999', fontFamily: 'Barlow, sans-serif', fontWeight: 600 }}>
+          Page 2 of 2
+        </span>
+      </div>
+
+      <Page2 t={t} />
+
+      <TweaksPanel title="Tweaks">
+        <TweakColor label="Header Color"  value={t.headerColor}  onChange={v => setTweak('headerColor', v)} />
+        <TweakColor label="Accent Color"  value={t.accentColor}  onChange={v => setTweak('accentColor', v)} />
+        <TweakColor label="Body BG"       value={t.bodyBg}       onChange={v => setTweak('bodyBg', v)} />
+        <TweakSlider label="Name Size" min={36} max={80} step={2} value={t.nameSize} onChange={v => setTweak('nameSize', v)} />
+        <TweakToggle label="Show Photo"   value={t.showPhoto}    onChange={v => setTweak('showPhoto', v)} />
+      </TweaksPanel>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
