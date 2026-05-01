@@ -46,7 +46,7 @@ He currently works at Pinger as a Senior Member of Technical Staff, where he is 
 **2010 to 2011**
 
 - Refactored and optimized legacy backend systems, including billing engines and customer support applications.
-- Improved scalability, performance, and operational visibility.
+- Improved scalability, performance, and operational visibility, extending the useful life of key systems.
 
 **Senior Software Engineer**  
 **2007 to 2010**

@@ -23,7 +23,7 @@ These projects show the areas where Matthew Hayes adds the most value: AI adopti
 ## Stream Customer Information System Scaling
 - Improved and refactored key parts of Stream's customer information system to help it scale.
 - Focused on billing, performance, operational reliability, and long-term platform health.
-- Helped extend the useful life of legacy systems while supporting business growth, including more years of runway for billing and query workloads.
+- Helped extend the useful life of legacy systems, adding several more years of runway for billing and query workloads.
 
 ## Stream to NRG Migration
 - Served as the primary hands-on technical architect for a major enterprise migration during the NRG acquisition.
