@@ -62,7 +62,7 @@ Currently at Pinger, where I am leading engineering-wide AI adoption across a 5-
 2020 to 2021
 
 - Designed and deployed production backend services in Go and Python.
-- Built systems that supported customer operations, internal business processes, and meaningful business savings.
+- Created a multi-threaded tax calculation API service that produced meaningful business savings.
 
 ### Stream
 **Senior Solutions Architect**  

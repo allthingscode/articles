@@ -25,7 +25,7 @@ He currently works at Pinger as a Senior Member of Technical Staff, where he is 
 **2020 to 2021**
 
 - Designed and deployed production-grade microservices in Go and Python.
-- Delivered a complex internal tax calculation service that produced meaningful business savings.
+- Created a multi-threaded tax calculation API service that produced meaningful business savings.
 - Worked on backend systems that supported customer service and enterprise operations.
 
 ## Stream
