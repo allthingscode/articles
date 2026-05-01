@@ -38,7 +38,7 @@ Currently at Pinger, where I am leading engineering-wide AI adoption to improve 
 - Removed dead code and obsolete API endpoints, reducing code size by about 20%.
 - Migrated 400k+ customer accounts to NRG SAP in 6 months at Stream.
 - Helped retire a $1M customer information system at Stream.
-- Supported a 90-day Azure carveout for non-energy resources during the Stream acquisition split.
+- Led the technical work for Stream's enterprise migration during the NRG acquisition.
 - Built a public Go project, GoBot, as a live subject for dev factory iteration.
 
 ## Professional Experience
