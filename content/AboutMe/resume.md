@@ -12,7 +12,9 @@ cascade:
 
 Senior software engineer and solutions architect with over 20 years of experience building backend systems, leading technical delivery, and driving practical AI adoption.
 
-Download the PDF version: [/files/matthew-hayes-resume.pdf](/articles/files/matthew-hayes-resume.pdf)
+Download the PDF version: [Download PDF](/articles/files/matthew-hayes-resume.pdf)
+
+Direct URL: https://allthingscode.github.io/articles/files/matthew-hayes-resume.pdf
 
 ## Summary
 
