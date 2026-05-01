@@ -17,7 +17,7 @@ He currently works at Pinger as a Senior Member of Technical Staff, where he is 
 **2021 to 2022**
 
 - Architected and deployed serverless, event-driven data processing pipelines using Azure Functions.
-- Automated reporting for customer billing, financial accounting, auditing, wholesale purchasing, usage analytics, and demand forecasting to improve data availability and operational decision-making.
+- Automated reporting for customer billing, financial accounting, auditing, wholesale purchasing, usage analytics, and demand forecasting to improve reporting speed, data availability, and operational decision-making.
 - Helped improve data availability and operational decision-making through better automation.
 
 ## Griddy

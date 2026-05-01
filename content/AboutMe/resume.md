@@ -54,7 +54,7 @@ Currently at Pinger, where I am leading engineering-wide AI adoption across a 5-
 2021 to 2022
 
 - Architected and deployed serverless, event-driven data processing pipelines using Azure Functions.
-- Automated reporting for billing, accounting, auditing, wholesale purchasing, usage analytics, and forecasting to improve data availability and decision-making.
+- Automated reporting for billing, accounting, auditing, wholesale purchasing, usage analytics, and forecasting to improve reporting speed, data availability, and operational decision-making.
 - Set up Azure resources to support SQL Server replication and reporting.
 
 ### Griddy

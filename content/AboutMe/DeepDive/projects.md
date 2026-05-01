@@ -33,4 +33,4 @@ These projects show the areas where Matthew Hayes adds the most value: AI adopti
 ## JP Energy Reporting Pipelines
 - Architected and deployed Azure Functions-based data processing pipelines for reporting and analytics.
 - Automated reporting used for billing, financial accounting, auditing, purchasing, usage analytics, and forecasting.
-- Helped improve decision-making through better automation and data availability.
+- Helped improve reporting speed, data availability, and decision-making through better automation.
