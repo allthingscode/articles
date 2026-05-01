@@ -6,11 +6,14 @@ slug: about-me
 aliases:
   - /about/
 hiddenInHomeList: true
+bodyClass: aboutme-page
 cascade:
   hiddenInHomeList: true
 ---
 
 Matthew Hayes is a hands-on senior software engineer and solutions architect with over 20 years of experience building backend systems and leading technical delivery.
+
+{{< figure src="https://drive.google.com/uc?export=view&id=1cXQzvRL2IQu2npz0QnRMWBpuMAsLvu7x" alt="AI-generated portrait of Matthew Hayes" class="aboutme-portrait" caption="AI-generated. This is what I look like, but I do not actually have an Android doing all the work." >}}
 
 He currently focuses on backend systems, architecture, and agentic workflows. At Pinger, he is leading engineering-wide AI adoption to improve software quality, delivery speed, and developer productivity.
 

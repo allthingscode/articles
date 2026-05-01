@@ -69,3 +69,30 @@ body.aboutme-deepdive-prompt .copy-code::before {
     -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'%3E%3Cpath d='M16 1H8a2 2 0 0 0-2 2v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2h1a2 2 0 0 0 2-2V5a4 4 0 0 0-4-4Zm-2 19H5V7h1v8a2 2 0 0 0 2 2h6v3ZM8 15V3h8a2 2 0 0 1 2 2v10H8Z'/%3E%3C/svg%3E") no-repeat center / contain;
     mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'%3E%3Cpath d='M16 1H8a2 2 0 0 0-2 2v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2h1a2 2 0 0 0 2-2V5a4 4 0 0 0-4-4Zm-2 19H5V7h1v8a2 2 0 0 0 2 2h6v3ZM8 15V3h8a2 2 0 0 1 2 2v10H8Z'/%3E%3C/svg%3E") no-repeat center / contain;
 }
+
+body.aboutme-page figure.aboutme-portrait {
+    max-width: 320px;
+    margin: 1.5rem auto 1.25rem;
+    text-align: center;
+}
+
+body.aboutme-page figure.aboutme-portrait img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+}
+
+:root[data-theme="dark"] body.aboutme-page figure.aboutme-portrait img {
+    border-color: #000;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+body.aboutme-page figure.aboutme-portrait figcaption {
+    margin-top: 0.6rem;
+    color: var(--secondary);
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
