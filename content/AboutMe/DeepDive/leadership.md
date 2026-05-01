@@ -1,5 +1,3 @@
-# Leadership
-
 ## Leadership Style
 - Hands-on technical leader.
 - Architect who builds systems and drives adoption.

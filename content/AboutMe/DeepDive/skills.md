@@ -1,5 +1,3 @@
-# Skills
-
 ## Architecture and System Design
 - Backend architecture
 - Application design

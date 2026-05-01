@@ -1,5 +1,3 @@
-# FAQ
-
 ## What kind of role are you targeting?
 I am targeting roles such as AI / Agentic Solutions Architect, or a higher-level leadership role focused on agentic delivery and adoption.
 

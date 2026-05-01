@@ -1,5 +1,3 @@
-# Projects
-
 ## Agentic Engineering Program at Pinger
 - Leading engineering-wide AI adoption across a 5-person backend team, plus QA and other non-IT staff, to improve software quality, delivery speed, and developer productivity.
 - Working to reduce technical debt and make applications more agent-centric.

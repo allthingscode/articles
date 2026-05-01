@@ -1,5 +1,3 @@
-# Values
-
 ## What You Care About
 - Quality in software delivery.
 - Reliability in systems and processes.

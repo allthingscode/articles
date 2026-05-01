@@ -1,5 +1,3 @@
-# Experience
-
 ## Pinger
 **Senior Member of Technical Staff**  
 **2022 to Present**

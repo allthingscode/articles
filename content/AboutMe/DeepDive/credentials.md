@@ -1,5 +1,3 @@
-# Credentials
-
 ## Education
 - Bachelor of Science in Computer Science, University of Texas at Dallas
 
