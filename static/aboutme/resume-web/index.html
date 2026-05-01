@@ -89,7 +89,7 @@ const DATA = {
     "Leadership":    ["Technical Strategy", "Team Mentoring", "Delivery Velocity", "Cross-functional Alignment"],
   },
   certs: [
-    "AWS Certified Cloud Practitioner",
+    "AWS Certified Cloud Practitioner: https://www.credly.com/badges/2f04f613-e8de-43ab-adb2-70c888025bc8/linked_in_profile",
     "Zend Certified Engineer",
   ],
   education: {
@@ -335,7 +335,24 @@ function Page1({ t }) {
           <div>
             <SectionHeader accent={accentColor}>Certifications</SectionHeader>
             {DATA.certs.map((c, i) => (
-              <div key={i} style={{ fontSize: 9, color: '#333', marginBottom: 5, paddingLeft: 8, borderLeft: `2px solid ${accentColor}`, lineHeight: 1.4 }}>{c}</div>
+              <div key={i} style={{ fontSize: 9, color: '#333', marginBottom: 5, paddingLeft: 8, borderLeft: `2px solid ${accentColor}`, lineHeight: 1.4 }}>
+                {c.includes('https://') ? (
+                  (() => {
+                    const idx = c.indexOf(': https://');
+                    const label = idx > -1 ? c.slice(0, idx) : c;
+                    const url = idx > -1 ? c.slice(idx + 2) : c;
+                    return (
+                      <>
+                        {label}
+                        {' '}
+                        <a href={url} target="_blank" rel="noreferrer" style={{ color: accentColor, textDecoration: 'underline' }}>
+                          Credly badge
+                        </a>
+                      </>
+                    );
+                  })()
+                ) : c}
+              </div>
             ))}
           </div>
 
@@ -572,3 +589,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(<App />);
 </script>
 </body>
 </html>
+
