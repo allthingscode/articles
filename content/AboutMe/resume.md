@@ -4,16 +4,11 @@ date: 2026-04-30T09:30:00-05:00
 draft: false
 slug: resume
 hiddenInHomeList: true
-bodyClass: aboutme-resume
 cascade:
   hiddenInHomeList: true
 ---
 
 Matthew Hayes is a senior software engineer and solutions architect with over 20 years of experience building backend systems, leading technical delivery, and driving practical AI adoption.
-
-Download the PDF version: [Download PDF](/articles/files/matthew-hayes-resume.pdf)
-
-Direct URL: https://allthingscode.github.io/articles/files/matthew-hayes-resume.pdf
 
 ## Summary
 
