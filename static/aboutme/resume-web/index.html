@@ -342,13 +342,14 @@ function Page1({ t }) {
                     const label = idx > -1 ? c.slice(0, idx) : c;
                     const url = idx > -1 ? c.slice(idx + 2) : c;
                     return (
-                      <>
+                      <div>
                         {label}
-                        {' '}
-                        <a href={url} target="_blank" rel="noreferrer" style={{ color: accentColor, textDecoration: 'underline' }}>
+                        <div style={{ marginTop: 2 }}>
+                          <a href={url} target="_blank" rel="noreferrer" style={{ color: accentColor, textDecoration: 'underline' }}>
                           Credly badge
-                        </a>
-                      </>
+                          </a>
+                        </div>
+                      </div>
                     );
                   })()
                 ) : c}
