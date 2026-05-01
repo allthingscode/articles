@@ -9,6 +9,7 @@ theme = 'PaperMod'
   defaultTheme = "light"
   disableThemeToggle = false
   disableSpecial1stPost = true
+  mainSections = ["posts"]
   ShowReadingTime = true
   ShowCodeCopyButtons = true
   ShowPostNavLinks = true
