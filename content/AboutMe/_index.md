@@ -22,6 +22,11 @@ His background also includes military service in the 82nd Airborne Division, whe
 
 He is targeting roles such as AI / Agentic Solutions Architect, or a higher-level leadership role focused on agentic delivery and adoption.
 
+## Resume
+
+- [Resume (Web)](resume-web/)
+- [Resume (Print)](resume-print/)
+
 ## DeepDive
 
 - [Resume](resume/)

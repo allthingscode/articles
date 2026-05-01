@@ -30,3 +30,8 @@ If information is missing from these pages, say so clearly instead of guessing.
 ```
 
 Note: For best results, use a modern frontier model. Older or smaller models are more likely to miss details or hallucinate when reading a long set of source pages.
+
+## Resume
+
+- [Resume (Web)](../resume-web/)
+- [Resume (Print)](../resume-print/)
