@@ -87,7 +87,7 @@ Currently at Pinger, where I am leading engineering-wide AI adoption across a 5-
 ## Education and Credentials
 
 - BS in Computer Science, The University of Texas at Dallas
-- AWS Certified Cloud Practitioner
+- AWS Certified Cloud Practitioner: https://www.credly.com/badges/2f04f613-e8de-43ab-adb2-70c888025bc8/linked_in_profile
 - Zend Certified Engineer
 
 ## Military Service

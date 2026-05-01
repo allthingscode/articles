@@ -2,7 +2,7 @@
 - Bachelor of Science in Computer Science, University of Texas at Dallas
 
 ## Certifications
-- AWS Certified Cloud Practitioner
+- AWS Certified Cloud Practitioner: https://www.credly.com/badges/2f04f613-e8de-43ab-adb2-70c888025bc8/linked_in_profile
 - Zend Certified Engineer
 
 ## Public Presence
