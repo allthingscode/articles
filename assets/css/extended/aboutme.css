@@ -1,3 +1,19 @@
+body.aboutme-deepdive-prompt {
+    --prompt-bg: #f8fafc;
+    --prompt-fg: #111827;
+    --prompt-border: #d1d5db;
+    --prompt-button-bg: rgba(255, 255, 255, 0.95);
+    --prompt-button-fg: #111827;
+}
+
+:root[data-theme="dark"] body.aboutme-deepdive-prompt {
+    --prompt-bg: #111827;
+    --prompt-fg: #e5e7eb;
+    --prompt-border: #374151;
+    --prompt-button-bg: rgba(17, 24, 39, 0.95);
+    --prompt-button-fg: #e5e7eb;
+}
+
 body.aboutme-deepdive-prompt .highlight,
 body.aboutme-deepdive-prompt pre {
     position: relative;
@@ -6,18 +22,18 @@ body.aboutme-deepdive-prompt pre {
 body.aboutme-deepdive-prompt .highlight pre,
 body.aboutme-deepdive-prompt .highlight code,
 body.aboutme-deepdive-prompt pre {
-    background: #f8fafc !important;
-    color: #111827 !important;
+    background: var(--prompt-bg) !important;
+    color: var(--prompt-fg) !important;
 }
 
 body.aboutme-deepdive-prompt .highlight *,
 body.aboutme-deepdive-prompt pre * {
-    color: #111827 !important;
+    color: var(--prompt-fg) !important;
     text-shadow: none !important;
 }
 
 body.aboutme-deepdive-prompt .highlight pre {
-    border: 1px solid #d1d5db;
+    border: 1px solid var(--prompt-border);
     border-radius: 8px;
     box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
 }
@@ -29,9 +45,9 @@ body.aboutme-deepdive-prompt .copy-code {
     position: absolute;
     top: 8px;
     right: 8px;
-    color: #111827;
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid #d1d5db;
+    color: var(--prompt-button-fg);
+    background: var(--prompt-button-bg);
+    border: 1px solid var(--prompt-border);
     border-radius: 6px;
     padding: 2px 8px;
     font-size: 13px;
@@ -41,7 +57,7 @@ body.aboutme-deepdive-prompt .copy-code {
 }
 
 body.aboutme-deepdive-prompt .copy-code:hover {
-    background: #ffffff;
+    background: color-mix(in srgb, var(--prompt-button-bg) 88%, var(--prompt-fg) 12%);
 }
 
 body.aboutme-deepdive-prompt .copy-code::before {
