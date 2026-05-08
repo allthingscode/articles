@@ -1,6 +1,6 @@
 ---
 title: "You Are Not Proficient With Agents Until You Can See the Slop"
-date: 2026-05-08T16:30:00-05:00
+date: 2026-05-08T16:20:00-05:00
 draft: false
 slug: see-the-slop
 aliases:
