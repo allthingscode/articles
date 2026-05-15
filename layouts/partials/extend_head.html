@@ -4,10 +4,22 @@
         const themeParam = urlParams.get('theme');
         
         if (themeParam === 'light' || themeParam === 'dark') {
-            // Update the DOM immediately to prevent flash
             document.documentElement.setAttribute('data-theme', themeParam);
-            // Persist the choice so it lasts as they navigate
             localStorage.setItem("pref-theme", themeParam);
+            return;
         }
+
+        // In auto mode, always follow the environment theme on first render.
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+
+        // Keep existing theme-toggle button working for the current page,
+        // but prevent stale stored values from blocking auto behavior later.
+        localStorage.removeItem("pref-theme");
+
+        // If the OS/browser theme changes while the page is open, apply it.
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+        });
     })();
 </script>
