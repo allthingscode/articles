@@ -6,7 +6,7 @@ theme = 'PaperMod'
 [params]
   author = "Matthew Hayes"
   authorLinkedin = "https://www.linkedin.com/in/matthew-l-hayes/"
-  defaultTheme = "light"
+  defaultTheme = "auto"
   disableThemeToggle = false
   disableSpecial1stPost = true
   mainSections = ["posts"]
