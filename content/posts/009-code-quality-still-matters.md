@@ -49,6 +49,8 @@ Messy code hides how the parts connect. It becomes hard to tell when a change in
 
 ## Agents Amplify What Is Already There
 
+That risk gets bigger when the next change is generated from the code that is already there.
+
 If the existing code is poorly organized, poorly named, complex, and full of weak patterns, the agent is more likely to continue that direction.
 
 If the existing code is organized, consistent, and built around clear quality standards, the agent has better patterns to extend.
@@ -57,7 +59,7 @@ Agents amplify the environment they are working in and the discipline of the per
 
 This is the wrong moment to relax quality metrics. Agentic development is the best reason to make them stricter, more consistent, and more automatic. The point is not to slow agents down. It is to keep them from being slowed down later by rework, bug fixing, and cleanup caused by sloppy code.
 
-Agentic development stresses simple code, clear boundaries, deterministic checks, review before acceptance, and code the developer can explain and stand behind.
+That means agentic development needs simple code, clear boundaries, deterministic checks, review before acceptance, and code the developer can explain and stand behind.
 
 The more complicated the code is, the less likely an agent is to make a change without introducing another issue.
 
@@ -81,7 +83,7 @@ Agents are very much like junior developers in the way their output needs to be 
 
 The difference is accountability. A junior developer can learn, understand the business, and eventually own the work. An agent cannot.
 
-Mean time to understanding is how long it takes someone to understand the relevant part of the system well enough to review or safely correct a change.
+That accountability depends on a practical measure: mean time to understanding. It is how long it takes someone to understand the relevant part of the system well enough to review or safely correct a change.
 
 Agents can generate changes quickly. That does not remove the need for human control. The developer still needs to review the work, spot weak patterns, and decide whether the accepted result preserves the quality of the software.
 
