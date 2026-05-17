@@ -24,22 +24,6 @@ Why does the code itself matter so much?
 
 That sounds reasonable only if you misunderstand why those standards existed in the first place.
 
-Good code was never about making code look pretty.
-
-Although my code is, obviously, incredibly beautiful to look at.
-
-Good code is about keeping software understandable, changeable, reviewable, testable, debuggable, secure, and safe to extend.
-
-That is not an AI-era opinion.
-
-That is textbook software engineering.
-
-Software quality has always meant more than whether the program produces the expected output once. These standards have been part of the discipline for decades.
-
-Those concerns do not disappear in agentic development.
-
-They become more important because agents can create more code, faster, with more confidence, and with less friction.
-
 AI made code easier to produce.
 
 It did not make bad software cheaper to own.
@@ -72,6 +56,14 @@ Working code can still be bad software. It can:
 Senior-quality software is code that is still safe to change long after it first works.
 
 ## Quality Was Never About Pretty Code
+
+Good code was never about making code look pretty.
+
+Although my code is, obviously, incredibly beautiful to look at.
+
+Good code is about keeping software understandable, changeable, reviewable, testable, debuggable, secure, and safe to extend.
+
+That is not an AI-era opinion. It is textbook software engineering. Software quality has always meant more than whether the program produces the expected output once, and these standards have been part of the discipline for decades.
 
 Saying code quality no longer matters is like saying organization no longer matters because search exists.
 
@@ -107,17 +99,27 @@ That is not just annoying.
 
 That is risk.
 
+## Agents Amplify, So Quality Costs More To Ignore
+
 Agents do not remove that risk.
 
 They operate inside it.
 
-## Agentic Development Raises The Cost Of Ignoring Quality
+Agents infer and imitate patterns from the codebase in front of them.
+
+If the existing code is poorly organized, poorly named, complex, and full of weak patterns, the agent is more likely to continue that direction.
+
+If the existing code is organized, consistent, and built around clear quality standards, the agent has better patterns to extend.
+
+That is why knowledge and experience still matter.
+
+Agents amplify the environment they are working in and the discipline of the person operating them.
 
 Agentic development does not replace existing quality standards. It raises the cost of ignoring them.
 
 This is the wrong moment to relax quality metrics. Treating them as legacy friction because agents are fast gets the tradeoff backwards. Agentic development is the best reason to make those metrics stricter, more consistent, and more automatic. The point is not to slow agents down. It is to keep them from being slowed down later by rework, bug fixing, and cleanup caused by sloppy code.
 
-But agentic development stresses a few quality dimensions even harder:
+The dimensions agentic development stresses hardest:
 
 - code simple enough for humans to understand and agents to change safely
 - visible relationships between components
@@ -132,83 +134,9 @@ You still need to check that the software was built correctly and that the right
 
 An agent-generated diff does not retire either responsibility.
 
-Complexity deserves special attention.
-
 The more complicated the code is, the less likely an agent is to make a change without introducing another issue.
 
 This is true for humans too, but agents make it easier to underestimate the risk because they can produce a plausible diff quickly.
-
-## Entropy Is The Default
-
-Software does not naturally stay clean.
-
-Requirements change. Deadlines compress. Patterns drift. Exceptions accumulate.
-
-The fastest local fix becomes tomorrow's weird precedent.
-
-That is entropy in practical engineering terms.
-
-Order does not preserve itself.
-
-It takes knowledge and experience to keep a codebase understandable and functional over time.
-
-It takes people who can recognize when a shortcut is harmless and when it is structural damage.
-
-Every system can tolerate some change risk.
-
-No system can tolerate a world where every change introduces another bug.
-
-If each fix creates another failure, the team is no longer adding capability. They are chasing instability. The software may technically run, but it can no longer be safely changed, because every repair risks breaking something else.
-
-That is the vicious cycle: sloppy code makes changes riskier, riskier changes introduce more issues, those issues degrade the software further, and the next change becomes riskier still.
-
-Good software does not stay good by accident.
-
-It stays good because people keep pushing back against disorder.
-
-Hold the line.
-
-## Mean Time To Understanding Is A Control Metric
-
-Entropy explains why a codebase degrades.
-
-Mean time to understanding decides whether anyone can catch it before it does.
-
-Mean time to understanding is how long it takes someone to understand the relevant part of the system well enough to review a change, challenge it, guide it, or safely correct it.
-
-That cost is real. It shows up when a developer has to trace a confusing flow before fixing a bug, when a reviewer has to reverse-engineer the intent of a pull request, or when someone is asked to approve an agent-generated change but cannot quickly tell whether it belongs in the system.
-
-Agents can generate changes quickly.
-
-That does not remove the need for human control.
-
-The developer still needs to review the work, spot weak patterns, challenge shallow reasoning, and decide whether the accepted result preserves the quality of the software.
-
-Clear names, clean boundaries, predictable organization, and consistent patterns make that control possible.
-
-Messy code makes it harder for humans to apply judgment before the damage compounds.
-
-Mean time to understanding is not just a productivity metric.
-
-It is a control metric.
-
-When humans lose the ability to understand and review the work, the system starts depending on generated output without enough judgment to keep it from degrading.
-
-That is not autonomy.
-
-That is just avoiding ownership and calling it automation.
-
-## Agents Amplify What Is Already There
-
-Agents infer and imitate patterns from the codebase in front of them.
-
-If the existing code is poorly organized, poorly named, complex, and full of weak patterns, the agent is more likely to continue that direction.
-
-If the existing code is organized, consistent, and built around clear quality standards, the agent has better patterns to extend.
-
-That is why knowledge and experience still matter.
-
-Agents amplify the environment they are working in and the discipline of the person operating them.
 
 This is where the "AI can just fix it later" argument breaks down.
 
@@ -236,9 +164,63 @@ Humans need it to review the work, judge it, and take responsibility for it.
 
 Agents need it to copy the right patterns, stay inside the right boundaries, and avoid following misleading examples.
 
-That is valuable whether the next change is made by a human, an agent, or both.
+## Entropy And Losing Control
 
-## Agent Output Needs Experienced Oversight
+Software does not naturally stay clean.
+
+Requirements change. Deadlines compress. Patterns drift. Exceptions accumulate.
+
+The fastest local fix becomes tomorrow's weird precedent.
+
+That is entropy in practical engineering terms.
+
+Order does not preserve itself.
+
+It takes knowledge and experience to keep a codebase understandable and functional over time.
+
+It takes people who can recognize when a shortcut is harmless and when it is structural damage.
+
+Every system can tolerate some change risk.
+
+No system can tolerate a world where every change introduces another bug.
+
+If each fix creates another failure, the team is no longer adding capability. They are chasing instability. The software may technically run, but it can no longer be safely changed, because every repair risks breaking something else.
+
+That is the vicious cycle: sloppy code makes changes riskier, riskier changes introduce more issues, those issues degrade the software further, and the next change becomes riskier still.
+
+Good software does not stay good by accident.
+
+It stays good because people keep pushing back against disorder.
+
+Pushing back depends on being able to understand the system fast enough to act.
+
+Mean time to understanding is how long it takes someone to understand the relevant part of the system well enough to review a change, challenge it, guide it, or safely correct it.
+
+That cost is real. It shows up when a developer has to trace a confusing flow before fixing a bug, when a reviewer has to reverse-engineer the intent of a pull request, or when someone is asked to approve an agent-generated change but cannot quickly tell whether it belongs in the system.
+
+Agents can generate changes quickly.
+
+That does not remove the need for human control.
+
+The developer still needs to review the work, spot weak patterns, challenge shallow reasoning, and decide whether the accepted result preserves the quality of the software.
+
+Clear names, clean boundaries, predictable organization, and consistent patterns make that control possible.
+
+Messy code makes it harder for humans to apply judgment before the damage compounds.
+
+Mean time to understanding is not just a productivity metric.
+
+It is a control metric.
+
+When humans lose the ability to understand and review the work, the system starts depending on generated output without enough judgment to keep it from degrading.
+
+That is not autonomy.
+
+That is just losing control and calling it automation.
+
+Hold the line.
+
+## The Human Still Owns The Decision
 
 People who have maintained production systems usually do not need much convincing here.
 
@@ -266,23 +248,9 @@ A junior developer can learn, grow, understand the business, and eventually own 
 
 An agent cannot carry that responsibility.
 
-If someone treats functional output as the whole quality bar, they do not understand what it actually takes to own software.
+Tools do not change that.
 
-That might sound harsh.
-
-It is also the line that matters when a business depends on the software working, changing safely, and continuing to support people's livelihoods.
-
-Experienced software engineers matter more, not less, in that world.
-
-The cost of skipping experienced oversight rarely lands on whoever skipped it.
-
-It lands later, on whoever has to keep the system working.
-
-## Tools Help. They Do Not Own The Decision.
-
-These quality measures and controls are not new.
-
-We already have software tools that help measure and enforce parts of code quality:
+We already have software tools that measure and enforce parts of code quality:
 
 - linters
 - formatters
@@ -294,33 +262,31 @@ We already have software tools that help measure and enforce parts of code quali
 - complexity analysis
 - duplication detection
 
-These tools are useful because they are deterministic.
-
-They catch obvious issues before a human has to spend time looking for them.
-
-That is the point.
-
-They do not replace experienced judgment. They catch the obvious, machine-detectable problems so experienced engineers can spend attention on the parts that actually require judgment.
+These tools are useful because they are deterministic. They catch obvious issues before a human has to spend time looking for them, so experienced engineers can spend attention on the parts that actually require judgment.
 
 A linter is not an experienced engineer. It is a deterministic check that reliably catches a narrow class of problems, and nothing more.
 
-AI reviewers are different.
-
-An AI reviewer can point out suspicious code, notice missing tests, question edge cases, compare a change against local patterns, and save time. But it is not deterministic. It is subjective and hit or miss: sometimes it catches real issues, sometimes it misses obvious ones, sometimes it flags things that are not real.
+AI reviewers are different. An AI reviewer can point out suspicious code, notice missing tests, question edge cases, compare a change against local patterns, and save time. But it is not deterministic. It is subjective and hit or miss: sometimes it catches real issues, sometimes it misses obvious ones, sometimes it flags things that are not real.
 
 That does not mean it is broken. That is the nature of the tool. The mistake is believing you can tweak it until it becomes something you never need to check.
 
-An AI reviewer can help you review. It cannot become the responsible engineer. The right use is not blind trust; it is better leverage for the human who still owns the decision.
+An AI reviewer can help you review. It cannot become the responsible engineer.
 
-## Do Not Accept Worse Code
+If someone treats functional output as the whole quality bar, they do not understand what it actually takes to own software.
+
+That might sound harsh.
+
+It is also the line that matters when a business depends on the software working, changing safely, and continuing to support people's livelihoods.
+
+The cost of skipping experienced oversight rarely lands on whoever skipped it.
+
+It lands later, on whoever has to keep the system working.
 
 The real danger is not that agents write ugly code.
 
 The real danger is that teams start accepting worse code because AI made code faster to produce.
 
 Code is cheaper to generate. Software is not cheaper to own.
-
-Agents can accelerate development. They cannot make bad software cheap to maintain.
 
 ---
 
