@@ -46,7 +46,7 @@ We did not invent naming, structure, tests, and conventions because engineers wa
 
 Messy code hides how the parts connect. It becomes hard to tell when a change in place A will affect place B. That is not just annoying. That is risk.
 
-## Agents Amplify, So Quality Costs More
+## Agents Amplify What Is Already There
 
 That risk gets bigger when the next change is generated from the code that is already there.
 
