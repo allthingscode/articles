@@ -8,7 +8,6 @@ aliases:
   - /posts/009-good-code-still-matters-in-agentic-development/
 ---
 
-
 Some people are starting to treat code quality as a legacy concern.
 
 The argument sounds practical:
@@ -67,15 +66,12 @@ It is not.
 
 It does not tell you whether the team should want to live with it.
 
-Working code can still be bad software.
+Working code can still be bad software. It can:
 
-It can duplicate business logic from another layer.
-
-It can handle errors in a way that does not match the rest of the system.
-
-It can hide the real domain concept behind generic names.
-
-It can add complexity that makes the next change harder.
+- duplicate business logic from another layer
+- handle errors in a way that does not match the rest of the system
+- hide the real domain concept behind generic names
+- add complexity that makes the next change harder
 
 Functional code is the floor.
 
@@ -103,15 +99,11 @@ We did not invent naming, structure, tests, and conventions because engineers wa
 
 We invented them because software spends most of its life being changed.
 
-Naming communicates intent.
-
-Consistency keeps local patterns predictable.
-
-Tests protect behavior from accidental regression.
-
-Small functions and modules reduce blast radius.
-
-Clear boundaries prevent one feature from leaking into the whole system.
+- Naming communicates intent.
+- Consistency keeps local patterns predictable.
+- Tests protect behavior from accidental regression.
+- Small functions and modules reduce blast radius.
+- Clear boundaries prevent one feature from leaking into the whole system.
 
 Low coupling and high cohesion are not fancy academic phrases.
 
@@ -135,37 +127,18 @@ They operate inside it.
 
 ## Agentic Development Raises The Cost Of Ignoring Quality
 
-Agentic development does not replace existing software quality standards.
+Agentic development does not replace existing quality standards. It raises the cost of ignoring them.
 
-It raises the cost of ignoring them.
+This is the wrong moment to relax quality metrics. Treating them as legacy friction because agents are fast gets the tradeoff backwards. Agentic development is the best reason to make those metrics stricter, more consistent, and more automatic. The point is not to slow agents down. It is to keep them from being slowed down later by rework, bug fixing, and cleanup caused by sloppy code.
 
-This is the wrong moment to relax quality metrics.
+But agentic development stresses a few quality dimensions even harder:
 
-Some people want to treat them as legacy friction because agents can produce code quickly.
-
-That gets the tradeoff backwards.
-
-Agentic development is the best reason to make quality metrics stricter, more consistent, and more automatic.
-
-The point is not to slow agents down.
-
-The point is to prevent agentic development from being slowed down later by rework, bug fixing, and cleanup caused by sloppy code.
-
-Good agentic development still depends on correctness, maintainability, security, meaningful tests, clean structure, useful names, and low risk of breaking existing behavior.
-
-But agentic development stresses a few quality dimensions even harder.
-
-The code needs to be simple enough for humans to understand and agents to change safely.
-
-The relationships between components need to be visible.
-
-The structure needs to give agents strong local examples and clear boundaries.
-
-The deterministic checks need to catch mechanical issues before a human looks.
-
-The review process needs to catch issues before the first good-looking answer gets accepted.
-
-The developer needs to be able to explain the code and stand behind it.
+- code simple enough for humans to understand and agents to change safely
+- visible relationships between components
+- structure that gives agents strong local examples and clear boundaries
+- deterministic checks that catch mechanical issues before a human looks
+- a review process that catches issues before the first good-looking answer is accepted
+- code the developer can explain and stand behind
 
 Verification and validation still matter.
 
@@ -205,25 +178,9 @@ Every system can tolerate some change risk.
 
 No system can tolerate a world where every change introduces another bug.
 
-If each fix creates another failure, the team is no longer adding capability.
+If each fix creates another failure, the team is no longer adding capability. They are chasing instability. The software may technically run, but it can no longer be safely changed, because every repair risks breaking something else.
 
-They are chasing instability.
-
-The software may technically run, but it is no longer reliably functional.
-
-It cannot easily be made functional because every repair risks breaking another part of the system.
-
-That is the vicious cycle.
-
-Sloppy code makes changes riskier.
-
-Riskier changes introduce more issues.
-
-Those issues further degrade the software.
-
-The degraded software becomes harder to understand.
-
-The next change becomes even riskier.
+That is the vicious cycle: sloppy code makes changes riskier, riskier changes introduce more issues, those issues degrade the software further, and the next change becomes riskier still.
 
 Good software does not stay good by accident.
 
@@ -239,13 +196,7 @@ Mean time to understanding decides whether anyone can catch it before it does.
 
 Mean time to understanding is how long it takes someone to understand the relevant part of the system well enough to review a change, challenge it, guide it, or safely correct it.
 
-That cost is real.
-
-It shows up when a developer has to trace a confusing flow before fixing a bug.
-
-It shows up when a reviewer has to reverse-engineer the intent of a pull request.
-
-It shows up when a developer is expected to approve an agent-generated change but cannot quickly determine whether the change actually belongs in the system.
+That cost is real. It shows up when a developer has to trace a confusing flow before fixing a bug, when a reviewer has to reverse-engineer the intent of a pull request, or when someone is asked to approve an agent-generated change but cannot quickly tell whether it belongs in the system.
 
 Agents can generate changes quickly.
 
@@ -271,8 +222,6 @@ That is just avoiding ownership and calling it automation.
 
 Agents infer and imitate patterns from the codebase in front of them.
 
-They amplify what is already there.
-
 If the existing code is poorly organized, poorly named, complex, and full of weak patterns, the agent is more likely to continue that direction.
 
 If the existing code is organized, consistent, and built around clear quality standards, the agent has better patterns to extend.
@@ -287,17 +236,13 @@ Agents can refactor, review, find bugs, and improve code they or another agent w
 
 But that does not make disorder free.
 
-If the codebase becomes harder to understand, harder to test, and harder to change, the agent is operating in worse conditions.
+If the codebase becomes harder to understand, test, and change, the agent is operating in worse conditions:
 
-It has weaker examples.
-
-It has more misleading local precedent.
-
-It has more accidental coupling to preserve.
-
-It has more hidden relationships where a change in one place quietly affects behavior somewhere else.
-
-It has more ways to make a plausible change that breaks something important.
+- weaker examples
+- more misleading local precedent
+- more accidental coupling to preserve
+- more hidden relationships where a change in one place quietly affects behavior somewhere else
+- more ways to make a plausible change that breaks something important
 
 Plausible is the whole problem.
 
@@ -317,11 +262,7 @@ That is valuable whether the next change is made by a human, an agent, or both.
 
 People who have maintained production systems usually do not need much convincing here.
 
-They have seen what happens when teams accept code that only works locally.
-
 They have fixed the "small shortcut" six months later.
-
-They have chased bugs through poorly named, poorly organized code.
 
 They have watched one careless pattern turn into a convention because the next person copied what was already there.
 
@@ -329,11 +270,7 @@ They are not defending tradition for its own sake.
 
 They are recognizing the maintenance cost before it arrives.
 
-Creating software with an agent does not make someone a senior software engineer.
-
-It makes software-shaped output easier to produce.
-
-Those are not the same thing.
+Creating software with an agent does not make someone a senior software engineer. It makes software-shaped output easier to produce.
 
 Agents are very much like junior developers in the way their output needs to be supervised.
 
@@ -383,47 +320,17 @@ They catch obvious issues before a human has to spend time looking for them.
 
 That is the point.
 
-They do not replace experienced judgment.
+They do not replace experienced judgment. They catch the obvious, machine-detectable problems so experienced engineers can spend attention on the parts that actually require judgment.
 
-They remove waste from the review process so experienced engineers can spend attention on the parts that actually require judgment.
-
-A linter is not an experienced engineer.
-
-It is a deterministic check that keeps experienced reviewers from wasting attention on problems a machine can catch reliably.
+A linter is not an experienced engineer. It is a deterministic check that reliably catches a narrow class of problems, and nothing more.
 
 AI reviewers are different.
 
-An AI reviewer can be useful.
+An AI reviewer can point out suspicious code, notice missing tests, question edge cases, compare a change against local patterns, and save time. But it is not deterministic. It is subjective and hit or miss: sometimes it catches real issues, sometimes it misses obvious ones, sometimes it flags things that are not real.
 
-It can point out suspicious code, notice missing tests, question edge cases, compare a change against local patterns, and save time.
+That does not mean it is broken. That is the nature of the tool. The mistake is believing you can tweak it until it becomes something you never need to check.
 
-But it is not deterministic.
-
-It is subjective.
-
-It is hit or miss.
-
-Sometimes it catches real issues.
-
-Sometimes it misses obvious issues.
-
-Sometimes it flags things that are not real.
-
-That does not mean the AI reviewer is broken.
-
-That is the nature of the tool.
-
-The mistake is believing you can tweak it until it becomes something you never need to check.
-
-That is the fallacy.
-
-An AI reviewer can help you review.
-
-It cannot become the responsible engineer.
-
-The right use of an AI reviewer is not blind trust.
-
-The right use is better leverage for the human who still owns the decision.
+An AI reviewer can help you review. It cannot become the responsible engineer. The right use is not blind trust; it is better leverage for the human who still owns the decision.
 
 ## Do Not Accept Worse Code
 
@@ -435,29 +342,11 @@ Code is cheaper to generate.
 
 Software is not cheaper to own.
 
-Functionality still matters.
+Functionality still matters, but it was never the whole definition of quality. The code still has to fit the system, the tests still have to prove behavior, the structure still has to support change, and the checks still have to run.
 
-But it was never the whole definition of quality.
+The AI reviewer can help, but it cannot own the decision. The developer still needs to own the result.
 
-The code still needs to fit the system.
-
-The tests still need to prove behavior.
-
-The names still need to carry meaning.
-
-The structure still needs to support change.
-
-The complexity still needs to stay controlled.
-
-The deterministic checks still need to run.
-
-The AI reviewer can help, but it cannot own the decision.
-
-The developer still needs to own the result.
-
-Agents can accelerate development.
-
-They cannot make bad software cheap to maintain.
+Agents can accelerate development. They cannot make bad software cheap to maintain.
 
 ---
 
