@@ -117,7 +117,7 @@ Low coupling and high cohesion are not fancy academic phrases.
 
 They are how you keep one change from accidentally dragging half the system behind it.
 
-Information hiding means keeping internal details in one place instead of spreading them across the codebase.
+Keep each part of the code responsible for its own internals.
 
 That makes changes easier, because you do not have to track hidden side effects across unrelated files.
 
