@@ -79,19 +79,13 @@ Hold the line.
 
 Creating software with an agent does not make someone a senior software engineer. It makes software-shaped output easier to produce.
 
-Agents are very much like junior developers in the way their output needs to be supervised. They can produce useful functional code that still needs review and correction before it is production quality.
+Like a junior developer, an agent can produce useful functional code that still needs review, correction, and simplification before it is production quality.
 
-The difference is accountability. A junior developer can learn, understand the business, and eventually own the work. An agent cannot.
+Agents can generate changes quickly. They can also refactor, review, find bugs, and improve code. None of that removes the need for human control.
 
-That accountability depends on a practical measure: mean time to understanding. It is how long it takes someone to understand the relevant part of the system well enough to review or safely correct a change.
+The developer still needs to understand the change well enough to decide whether the accepted result preserves the quality of the software.
 
-Agents can generate changes quickly. That does not remove the need for human control. The developer still needs to review the work, spot weak patterns, and decide whether the accepted result preserves the quality of the software.
-
-Tools do not change that. Linters, formatters, type checkers, static analysis, security scanners, coverage tools, and complexity checks catch obvious issues before a human spends time looking for them.
-
-AI reviewers can help too, but they are not deterministic. Sometimes they catch real issues. Sometimes they miss obvious ones. Sometimes they flag things that are not real.
-
-That does not mean the tool is broken. It means the tool needs to be used appropriately. An AI reviewer can help you review. It cannot become the responsible engineer.
+Tools help with that decision. Linters, formatters, type checkers, static analysis, security scanners, coverage tools, and complexity checks catch obvious issues before a human spends time looking for them. AI reviewers can help too, but they are not deterministic and cannot become the responsible engineer.
 
 If someone treats functional output as the whole quality bar, they do not understand what it actually takes to own software. That is the line that matters when a business depends on the software working, changing safely, and continuing to support people's livelihoods.
 
