@@ -63,31 +63,13 @@ The more complicated the code is, the less likely an agent is to make a change w
 
 Agents can refactor, review, find bugs, and improve code, but that does not make disorder free.
 
-If the codebase becomes harder to understand, test, and change, the agent is operating in worse conditions. It has weaker examples, more misleading precedent, more accidental coupling, and more ways to make a good-looking change that breaks something important.
-
-A change that looks right clears anyone who only checks whether it runs. It is stopped by someone who can still see the system-level risk.
-
-## Entropy And Losing Control
-
 Software does not naturally stay clean. Requirements change. Deadlines compress. Patterns drift. Exceptions accumulate. The fastest local fix becomes tomorrow's weird precedent.
-
-Every system can tolerate some change risk. No system can tolerate a world where every change introduces another bug.
 
 If each fix creates another failure, the team is no longer adding capability. They are chasing instability. The software may technically run, but it can no longer be safely changed.
 
 That is the vicious cycle: sloppy code makes changes riskier, riskier changes introduce more issues, and the next change becomes riskier still.
 
 Good software does not stay good by accident. It stays good because people keep pushing back against disorder.
-
-Mean time to understanding is how long it takes someone to understand the relevant part of the system well enough to review or safely correct a change.
-
-That cost is real. It shows up when a developer has to trace a confusing flow before fixing a bug or approve an agent-generated change without knowing whether it belongs in the system.
-
-Agents can generate changes quickly. That does not remove the need for human control. The developer still needs to review the work, spot weak patterns, and decide whether the accepted result preserves the quality of the software.
-
-Mean time to understanding is a control metric. When humans lose the ability to understand and review the work, the system starts depending on generated output without enough judgment to keep it from degrading.
-
-That is not autonomy. That is losing control and calling it automation.
 
 Hold the line.
 
@@ -99,9 +81,13 @@ Agents are very much like junior developers in the way their output needs to be 
 
 The difference is accountability. A junior developer can learn, understand the business, and eventually own the work. An agent cannot.
 
-Tools do not change that. Linters, formatters, type checkers, static analysis, security scanners, coverage tools, and complexity checks are useful because they are deterministic. They catch obvious issues before a human spends time looking for them, so reviewers can focus on the parts that actually require judgment.
+Mean time to understanding is how long it takes someone to understand the relevant part of the system well enough to review or safely correct a change.
 
-AI reviewers are different. They can point out suspicious code, notice missing tests, question edge cases, compare a change against local patterns, and save time. But they are not deterministic. Sometimes they catch real issues. Sometimes they miss obvious ones. Sometimes they flag things that are not real.
+Agents can generate changes quickly. That does not remove the need for human control. The developer still needs to review the work, spot weak patterns, and decide whether the accepted result preserves the quality of the software.
+
+Tools do not change that. Linters, formatters, type checkers, static analysis, security scanners, coverage tools, and complexity checks catch obvious issues before a human spends time looking for them.
+
+AI reviewers can help too, but they are not deterministic. Sometimes they catch real issues. Sometimes they miss obvious ones. Sometimes they flag things that are not real.
 
 That does not mean the tool is broken. It means the tool needs to be used appropriately. An AI reviewer can help you review. It cannot become the responsible engineer.
 
