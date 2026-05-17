@@ -28,15 +28,13 @@ Good code was never about making code look pretty.
 
 Although my code is, obviously, incredibly beautiful to look at.
 
-The real point was never visual appeal.
-
 Good code is about keeping software understandable, changeable, reviewable, testable, debuggable, secure, and safe to extend.
 
 That is not an AI-era opinion.
 
 That is textbook software engineering.
 
-Software quality has always included more than whether the program produces the expected output once. Reliability, maintainability, security, testability, modularity, and changeability have been part of the discipline for decades.
+Software quality has always meant more than whether the program produces the expected output once. These standards have been part of the discipline for decades.
 
 Those concerns do not disappear in agentic development.
 
@@ -56,8 +54,6 @@ But it is the minimum bar.
 
 A junior developer is expected to produce code that runs. That does not mean the code is finished at a senior level.
 
-This is where the misconception starts.
-
 People look at agent-generated code, see that it works, and treat that as the end of the evaluation.
 
 It is not.
@@ -73,13 +69,7 @@ Working code can still be bad software. It can:
 - hide the real domain concept behind generic names
 - add complexity that makes the next change harder
 
-Functional code is the floor.
-
-Senior-quality software is functional code that remains understandable, maintainable, testable, secure, and safe to change.
-
-Agentic development does not lower that bar.
-
-If anything, it should raise it.
+Senior-quality software is code that is still safe to change long after it first works.
 
 ## Quality Was Never About Pretty Code
 
@@ -108,10 +98,6 @@ We invented them because software spends most of its life being changed.
 Low coupling and high cohesion are not fancy academic phrases.
 
 They are how you keep one change from accidentally dragging half the system behind it.
-
-Keep each part of the code responsible for its own internals.
-
-That makes changes easier, because you do not have to track hidden side effects across unrelated files.
 
 Messy code hides how the parts connect.
 
@@ -151,12 +137,6 @@ Complexity deserves special attention.
 The more complicated the code is, the less likely an agent is to make a change without introducing another issue.
 
 This is true for humans too, but agents make it easier to underestimate the risk because they can produce a plausible diff quickly.
-
-Complexity is risk.
-
-Agentic development does not repeal that.
-
-It just makes the risk easier to produce at speed.
 
 ## Entropy Is The Default
 
@@ -338,13 +318,7 @@ The real danger is not that agents write ugly code.
 
 The real danger is that teams start accepting worse code because AI made code faster to produce.
 
-Code is cheaper to generate.
-
-Software is not cheaper to own.
-
-Functionality still matters, but it was never the whole definition of quality. The code still has to fit the system, the tests still have to prove behavior, the structure still has to support change, and the checks still have to run.
-
-The AI reviewer can help, but it cannot own the decision. The developer still needs to own the result.
+Code is cheaper to generate. Software is not cheaper to own.
 
 Agents can accelerate development. They cannot make bad software cheap to maintain.
 
