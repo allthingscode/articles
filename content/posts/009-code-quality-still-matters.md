@@ -8,6 +8,7 @@ aliases:
   - /posts/009-good-code-still-matters-in-agentic-development/
 ---
 
+
 Some people are starting to treat code quality as a legacy concern.
 
 The argument sounds practical:
@@ -138,11 +139,7 @@ The more complicated the code is, the less likely an agent is to make a change w
 
 This is true for humans too, but agents make it easier to underestimate the risk because they can produce a plausible diff quickly.
 
-This is where the "AI can just fix it later" argument breaks down.
-
-Agents can refactor, review, find bugs, and improve code they or another agent wrote.
-
-But that does not make disorder free.
+This is where the "AI can just fix it later" argument breaks down. Agents can refactor, review, find bugs, and improve code they or another agent wrote, but that does not make disorder free.
 
 If the codebase becomes harder to understand, test, and change, the agent is operating in worse conditions:
 
@@ -152,17 +149,9 @@ If the codebase becomes harder to understand, test, and change, the agent is ope
 - more hidden relationships where a change in one place quietly affects behavior somewhere else
 - more ways to make a plausible change that breaks something important
 
-Plausible is the whole problem.
+Plausible is the whole problem. A change that looks right clears anyone who only checks whether it runs. It is stopped by someone who can still see what the system was supposed to be.
 
-A change that looks right clears anyone who only checks whether it runs.
-
-It is stopped by someone who can still see what the system was supposed to be.
-
-Readable code matters to both humans and agents, but for different reasons.
-
-Humans need it to review the work, judge it, and take responsibility for it.
-
-Agents need it to copy the right patterns, stay inside the right boundaries, and avoid following misleading examples.
+Readable code matters to humans and agents for the same reason: safe changes depend on clear structure, clear boundaries, and fewer misleading examples.
 
 ## Entropy And Losing Control
 
@@ -198,19 +187,13 @@ Mean time to understanding is how long it takes someone to understand the releva
 
 That cost is real. It shows up when a developer has to trace a confusing flow before fixing a bug, when a reviewer has to reverse-engineer the intent of a pull request, or when someone is asked to approve an agent-generated change but cannot quickly tell whether it belongs in the system.
 
-Agents can generate changes quickly.
-
-That does not remove the need for human control.
-
-The developer still needs to review the work, spot weak patterns, challenge shallow reasoning, and decide whether the accepted result preserves the quality of the software.
+Agents can generate changes quickly. That does not remove the need for human control. The developer still needs to review the work, spot weak patterns, and decide whether the accepted result preserves the quality of the software.
 
 Clear names, clean boundaries, predictable organization, and consistent patterns make that control possible.
 
 Messy code makes it harder for humans to apply judgment before the damage compounds.
 
-Mean time to understanding is not just a productivity metric.
-
-It is a control metric.
+Mean time to understanding is not just a productivity metric. It is a control metric.
 
 When humans lose the ability to understand and review the work, the system starts depending on generated output without enough judgment to keep it from degrading.
 
@@ -234,19 +217,9 @@ They are recognizing the maintenance cost before it arrives.
 
 Creating software with an agent does not make someone a senior software engineer. It makes software-shaped output easier to produce.
 
-Agents are very much like junior developers in the way their output needs to be supervised.
+Agents are very much like junior developers in the way their output needs to be supervised. They can produce useful functional code that still needs review, correction, simplification, and guidance before it is production quality.
 
-They can produce useful functional code.
-
-They can also produce code that needs review, correction, simplification, and guidance before it is production quality.
-
-The difference is not the oversight pattern.
-
-The difference is accountability.
-
-A junior developer can learn, grow, understand the business, and eventually own the work.
-
-An agent cannot carry that responsibility.
+The difference is accountability. A junior developer can learn, grow, understand the business, and eventually own the work. An agent cannot carry that responsibility.
 
 Tools do not change that.
 
@@ -262,21 +235,15 @@ We already have software tools that measure and enforce parts of code quality:
 - complexity analysis
 - duplication detection
 
-These tools are useful because they are deterministic. They catch obvious issues before a human has to spend time looking for them, so experienced engineers can spend attention on the parts that actually require judgment.
+These tools are useful because they are deterministic. They catch obvious issues before a human spends time looking for them, so reviewers can focus on the parts that actually require judgment.
 
 A linter is not an experienced engineer. It is a deterministic check that reliably catches a narrow class of problems, and nothing more.
 
-AI reviewers are different. An AI reviewer can point out suspicious code, notice missing tests, question edge cases, compare a change against local patterns, and save time. But it is not deterministic. It is subjective and hit or miss: sometimes it catches real issues, sometimes it misses obvious ones, sometimes it flags things that are not real.
+AI reviewers are different. They can point out suspicious code, notice missing tests, question edge cases, compare a change against local patterns, and save time. But they are not deterministic. Sometimes they catch real issues, sometimes they miss obvious ones, and sometimes they flag things that are not real.
 
-That does not mean it is broken. That is the nature of the tool. The mistake is believing you can tweak it until it becomes something you never need to check.
+That does not mean the tool is broken. It means the tool needs to be used appropriately. An AI reviewer can help you review. It cannot become the responsible engineer.
 
-An AI reviewer can help you review. It cannot become the responsible engineer.
-
-If someone treats functional output as the whole quality bar, they do not understand what it actually takes to own software.
-
-That might sound harsh.
-
-It is also the line that matters when a business depends on the software working, changing safely, and continuing to support people's livelihoods.
+If someone treats functional output as the whole quality bar, they do not understand what it actually takes to own software. That is the line that matters when a business depends on the software working, changing safely, and continuing to support people's livelihoods.
 
 The cost of skipping experienced oversight rarely lands on whoever skipped it.
 
