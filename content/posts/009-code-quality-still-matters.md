@@ -56,7 +56,7 @@ If the existing code is organized, consistent, and built around clear quality st
 
 Agents amplify the environment they are working in and the discipline of the person operating them. That is why knowledge and experience still matter.
 
-This is the wrong moment to relax quality standards. Agentic development is the reason to make them stricter and more automatic: simple code, clear boundaries, deterministic checks, and review before acceptance. The more complicated the code, the less likely an agent changes it without introducing another problem.
+This is the wrong moment to relax quality standards. Agentic development is the reason to make them stricter and more automatic: simple code, clear boundaries, deterministic checks, and review before acceptance. The more tangled and disorganized the code, the less likely an agent changes it without introducing another problem.
 
 None of that makes disorder free. Software does not stay clean on its own. Requirements change, deadlines compress, patterns drift, exceptions accumulate, and the fastest local fix becomes tomorrow's weird precedent. When each fix creates the next failure, the team is no longer adding capability. It is chasing instability, and the software can no longer be safely changed.
 
