@@ -82,4 +82,4 @@ Code is cheaper to generate. Software is not cheaper to own.
 
 ---
 
-I use agents for leverage, but I do not lower the quality bar because the code was generated quickly. If the work is agent-driven, I expect the resulting code to be higher quality, not merely faster. The agent gives me more capacity to critique, test, simplify, verify, and improve the work before I accept it. If the code lands under my name, I own it. That means I own more than whether it runs. I own whether it belongs.
+I use agents for leverage, but I do not lower the quality bar because the code was generated quickly. If the work is agent-driven, I expect the resulting code to be higher quality, not merely produced faster. The agent gives me more capacity to critique, test, simplify, verify, and improve the work before I accept it. If the code lands under my name, I own it. That means I own more than whether it runs. I own whether it belongs.
