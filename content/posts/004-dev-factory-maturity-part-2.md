@@ -8,7 +8,7 @@ aliases:
   - /posts/004-dev-factory-maturity-part-2/
 ---
 
-This is Part 2 of a 4-part series on dev factory maturity. Part 1 covers the application framing and the basic workflow structure that this part builds on.
+This is Part 2 of a 4-part series on dev factory maturity.
 
 Part 1 established the basic premise: a dev factory is its own application, not a side tool or a markdown trick. If you have not read that first, start there. The rest of the series assumes that framing.
 
