@@ -12,9 +12,7 @@ Building a dev factory means building a real application.
 
 You do not get one by stitching together markdown files. Markdown can describe the workflow, but deterministic code has to make it real.
 
-That means it needs architecture, workflow logic, state management, testing, recovery, and operational rules. It is not just a few prompts, a few skills, and some files stitched together with optimism.
-
-This is Part 1 of a 4-part series on dev factory maturity. Start here, then read the later parts in order.
+This is Part 1 of a 4-part series on dev factory maturity. It covers the foundation: why a dev factory must be designed and operated as an application. Start here, then read the later parts in order.
 
 ## 1. A Dev Factory Is Its Own Application
 
