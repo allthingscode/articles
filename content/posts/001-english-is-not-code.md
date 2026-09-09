@@ -42,7 +42,7 @@ Unpredictability is baked into the stack itself. Tiny differences in how hardwar
 In engineering, "mostly correct" is just another way of saying "unpredictably broken."
 If your code works 99% of the time, that 1% failure isn't a quirk - it's a production incident.
 
-Real engineering eliminates edge cases. Rolling the dice is gambling.
+Real engineering identifies edge cases, limits the problems they can cause, and defines how the system recovers from failure. Gambling is assuming a probabilistic failure will stay harmless.
 
 ## 3. The Vibe Coding Trap
 
