@@ -10,7 +10,7 @@ aliases:
 
 This is Part 4 of a 4-part series on dev factory maturity. Parts 1 through 3 cover the application framing, failure modes, and control plane that lead up to this point.
 
-Parts 1 through 3 established the factory model. This part starts with a recap of the mature dev factory components, then closes the series by looking at the economic limit and the practical tradeoffs.
+This part starts with a recap of the mature dev factory components, then closes the series by looking at the economic limit and the practical tradeoffs.
 
 ## Mature Dev Factory Components
 
