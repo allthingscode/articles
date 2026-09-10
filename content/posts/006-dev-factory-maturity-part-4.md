@@ -54,7 +54,7 @@ Most companies do not create their own email application. Eventually, most compa
 The main reasons to attempt it are:
 
 - academic value, discovery, and experimentation
-- avoiding the high-dollar commercial options / lock-in
+- avoiding expensive commercial options and vendor lock-in
 
 In the age of AI, software is more ephemeral, which makes rolling your own dev factory easier than it has ever been.
 
