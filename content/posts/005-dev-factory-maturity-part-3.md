@@ -36,7 +36,7 @@ If you cannot measure the process, you cannot tell whether it is becoming more r
 
 You need to know what each backlog item or story is costing you.
 
-Budget ceilings and handoff counts are useful, but they are only a proxy. A better efficiency view tracks cost per item, or at least cost per phase or completion.
+Budget ceilings and handoff counts are useful, but they are only proxies. A better efficiency view tracks cost per item, or at least cost per phase or completion.
 
 You also need a budget. If a story runs past its budget, that should automatically trigger your intervention.
 
