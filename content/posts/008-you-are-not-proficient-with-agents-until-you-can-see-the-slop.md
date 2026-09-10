@@ -46,12 +46,6 @@ A person can now create something that looks like an app much faster than before
 
 But creating something that looks like software is not the same thing as professional software engineering.
 
-A toddler drawing can be impressive for a toddler. You can put it on the fridge. You can praise the progress. You can mean it.
-
-But you should not confuse it with the regular output of a professional designer.
-
-The point is not to insult beginners. The point is to separate artifact creation from professional judgment.
-
 AI makes artifacts easier to create. It does not automatically give the operator professional judgment.
 
 ## Phase 1: This Is Awesome
