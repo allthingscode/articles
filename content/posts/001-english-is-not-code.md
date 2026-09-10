@@ -75,8 +75,8 @@ Every line of code must pass a verification checklist: tests, vet, lint, and spe
 
 If the build and review don't align, a hard circuit breaker kicks in and a human is paged.
 
-The third rule - once you've nailed down dependability - is total physical isolation.
-Running every task in its own Git worktree ensures that agent "chaos" stays decoupled from the project root while you scale.
+The third rule - once you've nailed down dependability - is workspace isolation.
+Running every task in its own Git worktree keeps each task's changes separate from the project root while you scale.
 
 Wrap probabilistic intent in a deterministic pipeline, and the statistical guesser becomes a high-velocity development engine.
 
