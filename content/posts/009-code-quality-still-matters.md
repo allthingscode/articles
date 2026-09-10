@@ -66,7 +66,7 @@ Hold the line.
 
 ## The Human Still Owns The Decision
 
-Creating software with an agent does not make someone a senior software engineer. It makes software-shaped output easier to produce. Like junior output, it still needs review, correction, and simplification before it is production quality.
+Creating software with an agent does not make someone a senior software engineer. It makes software-shaped output easier to produce. That output still needs review, correction, and simplification before it is production quality.
 
 Agents can generate changes quickly. They can also refactor, review, find bugs, and improve code. None of that removes the need for human control.
 
