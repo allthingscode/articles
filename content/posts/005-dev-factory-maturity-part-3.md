@@ -8,7 +8,7 @@ aliases:
   - /posts/005-dev-factory-maturity-part-3/
 ---
 
-This is Part 3 of a 4-part series on dev factory maturity. Parts 1 and 2 cover the application framing and failure modes that set up this control-plane discussion.
+This is Part 3 of a 4-part series on dev factory maturity.
 
 Part 1 covered the basic application framing. Part 2 covered the ways the workflow can get stuck in loops or fail to converge. This part is about the control plane that gives you visibility into the run, preserves the state needed for recovery, and makes measurement possible.
 
